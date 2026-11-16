@@ -3,7 +3,7 @@
 **A self-updating scraper that tracks early-career ChemE roles so you don't have to.**
 
 [![CI](https://img.shields.io/github/actions/workflow/status/NathanYKo/Chem-e/scrape.yml?label=scrape&style=flat-square)](https://github.com/NathanYKo/Chem-e/actions/workflows/scrape.yml)
-![Updates](https://img.shields.io/badge/updates-daily-3fb950?style=flat-square)
+![Updates](https://img.shields.io/badge/updates-every%206h-3fb950?style=flat-square)
 ![Boards](https://img.shields.io/badge/boards-47-blue?style=flat-square)
 ![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=flat-square&logo=go&logoColor=white)
 
@@ -2466,7 +2466,7 @@ go test ./...
 | `-concurrency` | 12 | Max in-flight HTTP requests |
 | `-boards` | 8 | Boards scraped in parallel |
 
-The GitHub Action in [`.github/workflows/scrape.yml`](.github/workflows/scrape.yml) runs daily: `go test` → scrape → `-verify` → commit the refreshed README, `JOBS.md`, and `data/jobs.*`. You can also start it from the **Actions** tab.
+The GitHub Action in [`.github/workflows/scrape.yml`](.github/workflows/scrape.yml) runs every 6 hours: `go test` → scrape → `-verify` → commit the refreshed README, `JOBS.md`, and `data/jobs.*`. You can also start it from the **Actions** tab.
 
 ## Companies covered (47 boards)
 

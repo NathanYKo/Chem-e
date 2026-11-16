@@ -27,7 +27,60 @@ func writeOutputs(outDir string, jobs []Job, boards, failed int, today string) e
 	if err := writeCSV(filepath.Join(outDir, "data", "jobs.csv"), jobs); err != nil {
 		return err
 	}
-	return os.WriteFile(filepath.Join(outDir, "JOBS.md"), []byte(renderMarkdown(jobs, boards, failed, today)), 0o644)
+	md := renderMarkdown(jobs, boards, failed, today)
+	if err := os.WriteFile(filepath.Join(outDir, "JOBS.md"), []byte(md), 0o644); err != nil {
+		return err
+	}
+	return refreshReadme(outDir, md)
+}
+
+const (
+	jobsStartMarker = "<!-- jobs:start -->"
+	jobsEndMarker   = "<!-- jobs:end -->"
+)
+
+// refreshReadme replaces the marked job list in README.md so the GitHub repo
+// page shows the same table as JOBS.md. A directory with no README (isolated
+// scrape outs) is left alone.
+func refreshReadme(outDir, jobsMD string) error {
+	path := filepath.Join(outDir, "README.md")
+	readme, err := os.ReadFile(path)
+	if err != nil {
+		if os.IsNotExist(err) {
+			return nil
+		}
+		return err
+	}
+	updated, err := spliceJobs(string(readme), jobsMD)
+	if err != nil {
+		return err
+	}
+	return os.WriteFile(path, []byte(updated), 0o644)
+}
+
+func spliceJobs(readme, jobsMD string) (string, error) {
+	start := strings.Index(readme, jobsStartMarker)
+	end := strings.Index(readme, jobsEndMarker)
+	if start < 0 || end < 0 || end < start {
+		return "", fmt.Errorf("README missing %s / %s markers", jobsStartMarker, jobsEndMarker)
+	}
+	var b strings.Builder
+	b.WriteString(readme[:start])
+	b.WriteString(jobsStartMarker)
+	b.WriteString("\n\n")
+	b.WriteString(jobsBody(jobsMD))
+	b.WriteString("\n\n")
+	b.WriteString(readme[end:])
+	return b.String(), nil
+}
+
+// jobsBody drops the JOBS.md title so the README keeps its own heading.
+func jobsBody(md string) string {
+	md = strings.TrimSpace(md)
+	if _, rest, ok := strings.Cut(md, "\n"); ok {
+		return strings.TrimSpace(rest)
+	}
+	return md
 }
 
 func writeCSV(path string, jobs []Job) error {

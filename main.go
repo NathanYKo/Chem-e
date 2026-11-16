@@ -30,12 +30,13 @@ type options struct {
 	timeout       time.Duration
 	only          string
 	maxAge        int
+	verifyOnly    bool
 }
 
 func main() {
 	var o options
 	flag.StringVar(&o.companiesPath, "companies", "data/companies.json", "company/board list (JSON)")
-	flag.StringVar(&o.outDir, "out", ".", "directory for JOBS.md, data/jobs.json and data/jobs.csv")
+	flag.StringVar(&o.outDir, "out", ".", "directory for README.md, JOBS.md, data/jobs.json and data/jobs.csv")
 	flag.BoolVar(&o.strict, "strict", false, "only keep titles that name a ChemE discipline (drop generic engineering roles)")
 	flag.BoolVar(&o.allLocations, "all-locations", false, "keep non-US roles too")
 	flag.IntVar(&o.concurrency, "concurrency", 12, "max in-flight HTTP requests")
@@ -44,6 +45,7 @@ func main() {
 	flag.DurationVar(&o.timeout, "timeout", 30*time.Second, "per-request timeout")
 	flag.IntVar(&o.maxAge, "max-age", 30, "only keep roles posted within this many days (0 = no limit)")
 	flag.StringVar(&o.only, "only", "", "only scrape companies whose name contains this (case-insensitive)")
+	flag.BoolVar(&o.verifyOnly, "verify", false, "check existing JOBS.md / data/jobs.json against classifier rules; do not scrape")
 	flag.Parse()
 
 	if err := run(context.Background(), o); err != nil {
@@ -58,6 +60,22 @@ type boardResult struct {
 }
 
 func run(ctx context.Context, o options) error {
+	if o.verifyOnly {
+		vopts := verifyOptions{strict: o.strict, allLocations: o.allLocations, maxAge: o.maxAge}
+		violations, err := verifyOutputs(o.outDir, vopts, time.Now().UTC())
+		if err != nil {
+			return err
+		}
+		if len(violations) == 0 {
+			log.Printf("verify ok: %s", filepath.Join(o.outDir, "data", "jobs.json"))
+			return nil
+		}
+		for _, v := range violations {
+			log.Printf("  VIOLATION %s", v)
+		}
+		return fmt.Errorf("verify failed: %d violation(s)", len(violations))
+	}
+
 	companies, err := loadCompanies(o.companiesPath)
 	if err != nil {
 		return err
@@ -104,6 +122,14 @@ func run(ctx context.Context, o options) error {
 
 	if err := writeOutputs(o.outDir, matched, len(companies), len(failed), today); err != nil {
 		return err
+	}
+
+	vopts := verifyOptions{strict: o.strict, allLocations: o.allLocations, maxAge: o.maxAge}
+	if violations := verifyJobs(matched, vopts, time.Now().UTC()); len(violations) > 0 {
+		for _, v := range violations {
+			log.Printf("  VIOLATION %s", v)
+		}
+		return fmt.Errorf("post-scrape verify failed: %d violation(s)", len(violations))
 	}
 
 	log.Printf("scraped %d boards (%d failed), %d raw postings -> %d ChemE early-career roles",

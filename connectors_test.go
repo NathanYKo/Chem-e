@@ -102,33 +102,6 @@ func TestWorkdayBadTenantFailsFast(t *testing.T) {
 	}
 }
 
-// Lilly and Takeda left wd5/wd3. Those clusters answer HTTP 422 with an empty
-// Workday error and never open a Calypso session. The boards now live on
-// wd115 and wd502.
-func TestWorkdayClusterMigrations(t *testing.T) {
-	companies, err := loadCompanies("data/companies.json")
-	if err != nil {
-		t.Fatal(err)
-	}
-	want := map[string]string{
-		"Eli Lilly": "https://lilly.wd115.myworkdayjobs.com/wday/cxs/lilly/LLY/jobs",
-		"Takeda":    "https://takeda.wd502.myworkdayjobs.com/wday/cxs/takeda/external/jobs",
-	}
-	got := map[string]string{}
-	for _, co := range companies {
-		if _, ok := want[co.Name]; !ok || co.ATS != "workday" {
-			continue
-		}
-		api, _ := workdayURLs(co)
-		got[co.Name] = api
-	}
-	for name, api := range want {
-		if got[name] != api {
-			t.Errorf("%s api = %q, want %q", name, got[name], api)
-		}
-	}
-}
-
 func TestGreenhouseLeverAshby(t *testing.T) {
 	c := testClient(t, func(w http.ResponseWriter, r *http.Request) {
 		switch r.Header.Get("X-Orig-Host") {

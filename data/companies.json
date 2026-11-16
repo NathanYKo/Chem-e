@@ -160,14 +160,6 @@
     "site": "Careers"
   },
   {
-    "name": "Amcor",
-    "category": "Chemicals & Materials",
-    "ats": "workday",
-    "slug": "amcor",
-    "wd": "wd5",
-    "site": "amcor_external_career_site"
-  },
-  {
     "name": "Honeywell",
     "category": "Chemicals & Materials",
     "ats": "oracle",
@@ -182,410 +174,12 @@
     "site": "CX_2"
   },
   {
-    "name": "Chevron",
-    "category": "Oil, Gas & Energy",
-    "ats": "workday",
-    "slug": "chevron",
-    "wd": "wd5",
-    "site": "University"
-  },
-  {
-    "name": "ConocoPhillips",
-    "category": "Oil, Gas & Energy",
-    "ats": "workday",
-    "slug": "conocophillips",
-    "wd": "wd1",
-    "site": "External"
-  },
-  {
-    "name": "Marathon Petroleum",
-    "category": "Oil, Gas & Energy",
-    "ats": "workday",
-    "slug": "mpc",
-    "wd": "wd1",
-    "site": "MPCCareers"
-  },
-  {
-    "name": "Occidental (Oxy)",
-    "category": "Oil, Gas & Energy",
-    "ats": "workday",
-    "slug": "oxy",
-    "wd": "wd5",
-    "site": "UniversityRelations"
-  },
-  {
-    "name": "Occidental (Oxy)",
-    "category": "Oil, Gas & Energy",
-    "ats": "workday",
-    "slug": "oxy",
-    "wd": "wd5",
-    "site": "Corporate"
-  },
-  {
-    "name": "Shell",
-    "category": "Oil, Gas & Energy",
-    "ats": "workday",
-    "slug": "shell",
-    "wd": "wd3",
-    "site": "ShellCareers"
-  },
-  {
-    "name": "BP",
-    "category": "Oil, Gas & Energy",
-    "ats": "workday",
-    "slug": "bpinternational",
-    "wd": "wd3",
-    "site": "bpEarlyCareers"
-  },
-  {
-    "name": "BP",
-    "category": "Oil, Gas & Energy",
-    "ats": "workday",
-    "slug": "bpinternational",
-    "wd": "wd3",
-    "site": "bpCareers"
-  },
-  {
-    "name": "Baker Hughes",
-    "category": "Oil, Gas & Energy",
-    "ats": "workday",
-    "slug": "bakerhughes",
-    "wd": "wd5",
-    "site": "BakerHughes"
-  },
-  {
-    "name": "KBR",
-    "category": "Oil, Gas & Energy",
-    "ats": "workday",
-    "slug": "kbr",
-    "wd": "wd5",
-    "site": "KBR_Careers"
-  },
-  {
     "name": "GE Vernova",
     "category": "Oil, Gas & Energy",
     "ats": "workday",
     "slug": "gevernova",
     "wd": "wd5",
     "site": "vernova_externalsite"
-  },
-  {
-    "name": "Procter & Gamble",
-    "category": "Consumer, Food & Ag",
-    "ats": "workday",
-    "slug": "pg",
-    "wd": "wd5",
-    "site": "1000"
-  },
-  {
-    "name": "Clorox",
-    "category": "Consumer, Food & Ag",
-    "ats": "workday",
-    "slug": "clorox",
-    "wd": "wd1",
-    "site": "Clorox",
-    "host": "wd1.myworkdaysite.com"
-  },
-  {
-    "name": "SC Johnson",
-    "category": "Consumer, Food & Ag",
-    "ats": "workday",
-    "slug": "scj",
-    "wd": "wd5",
-    "site": "External_Career_Site"
-  },
-  {
-    "name": "Kraft Heinz",
-    "category": "Consumer, Food & Ag",
-    "ats": "workday",
-    "slug": "heinz",
-    "wd": "wd1",
-    "site": "KraftHeinz_Careers_UR"
-  },
-  {
-    "name": "Kraft Heinz",
-    "category": "Consumer, Food & Ag",
-    "ats": "workday",
-    "slug": "heinz",
-    "wd": "wd1",
-    "site": "KraftHeinz_Careers"
-  },
-  {
-    "name": "Mars",
-    "category": "Consumer, Food & Ag",
-    "ats": "workday",
-    "slug": "mars",
-    "wd": "wd3",
-    "site": "external"
-  },
-  {
-    "name": "Mondelez",
-    "category": "Consumer, Food & Ag",
-    "ats": "workday",
-    "slug": "mdlz",
-    "wd": "wd3",
-    "site": "External",
-    "host": "wd3.myworkdaysite.com"
-  },
-  {
-    "name": "Unilever",
-    "category": "Consumer, Food & Ag",
-    "ats": "workday",
-    "slug": "unilever",
-    "wd": "wd3",
-    "site": "Unilever_Early_Careers"
-  },
-  {
-    "name": "Coca-Cola",
-    "category": "Consumer, Food & Ag",
-    "ats": "workday",
-    "slug": "coke",
-    "wd": "wd1",
-    "site": "coca-cola-careers"
-  },
-  {
-    "name": "Anheuser-Busch",
-    "category": "Consumer, Food & Ag",
-    "ats": "workday",
-    "slug": "abinbev",
-    "wd": "wd1",
-    "site": "USA"
-  },
-  {
-    "name": "Ingredion",
-    "category": "Consumer, Food & Ag",
-    "ats": "workday",
-    "slug": "ingredion",
-    "wd": "wd1",
-    "site": "IngredionCareers"
-  },
-  {
-    "name": "Tyson Foods",
-    "category": "Consumer, Food & Ag",
-    "ats": "workday",
-    "slug": "tysonfoods",
-    "wd": "wd5",
-    "site": "TSN"
-  },
-  {
-    "name": "Campbell's",
-    "category": "Consumer, Food & Ag",
-    "ats": "workday",
-    "slug": "campbellsoup",
-    "wd": "wd5",
-    "site": "externalcareers_globalsite"
-  },
-  {
-    "name": "Conagra Brands",
-    "category": "Consumer, Food & Ag",
-    "ats": "workday",
-    "slug": "conagrabrands",
-    "wd": "wd1",
-    "site": "Careers_US"
-  },
-  {
-    "name": "J.M. Smucker",
-    "category": "Consumer, Food & Ag",
-    "ats": "workday",
-    "slug": "smucker",
-    "wd": "wd5",
-    "site": "US_External_Careers"
-  },
-  {
-    "name": "Pfizer",
-    "category": "Pharma & Biotech",
-    "ats": "workday",
-    "slug": "pfizer",
-    "wd": "wd1",
-    "site": "PfizerCareers"
-  },
-  {
-    "name": "Merck",
-    "category": "Pharma & Biotech",
-    "ats": "workday",
-    "slug": "msd",
-    "wd": "wd5",
-    "site": "searchjobs"
-  },
-  {
-    "name": "Eli Lilly",
-    "category": "Pharma & Biotech",
-    "ats": "workday",
-    "slug": "lilly",
-    "wd": "wd115",
-    "site": "LLY"
-  },
-  {
-    "name": "Johnson & Johnson",
-    "category": "Pharma & Biotech",
-    "ats": "workday",
-    "slug": "jj",
-    "wd": "wd5",
-    "site": "JJ"
-  },
-  {
-    "name": "Bristol Myers Squibb",
-    "category": "Pharma & Biotech",
-    "ats": "workday",
-    "slug": "bristolmyerssquibb",
-    "wd": "wd5",
-    "site": "bms"
-  },
-  {
-    "name": "Amgen",
-    "category": "Pharma & Biotech",
-    "ats": "workday",
-    "slug": "amgen",
-    "wd": "wd1",
-    "site": "careers"
-  },
-  {
-    "name": "Gilead",
-    "category": "Pharma & Biotech",
-    "ats": "workday",
-    "slug": "gilead",
-    "wd": "wd1",
-    "site": "gileadcareers"
-  },
-  {
-    "name": "Regeneron",
-    "category": "Pharma & Biotech",
-    "ats": "workday",
-    "slug": "regeneron",
-    "wd": "wd1",
-    "site": "Careers"
-  },
-  {
-    "name": "Moderna",
-    "category": "Pharma & Biotech",
-    "ats": "workday",
-    "slug": "modernatx",
-    "wd": "wd1",
-    "site": "M_tx"
-  },
-  {
-    "name": "AbbVie",
-    "category": "Pharma & Biotech",
-    "ats": "smartrecruiters",
-    "slug": "AbbVie"
-  },
-  {
-    "name": "AstraZeneca",
-    "category": "Pharma & Biotech",
-    "ats": "workday",
-    "slug": "astrazeneca",
-    "wd": "wd3",
-    "site": "Careers"
-  },
-  {
-    "name": "GSK",
-    "category": "Pharma & Biotech",
-    "ats": "workday",
-    "slug": "gsk",
-    "wd": "wd5",
-    "site": "GSKCareers"
-  },
-  {
-    "name": "Novartis",
-    "category": "Pharma & Biotech",
-    "ats": "workday",
-    "slug": "novartis",
-    "wd": "wd3",
-    "site": "Novartis_Careers"
-  },
-  {
-    "name": "Sanofi",
-    "category": "Pharma & Biotech",
-    "ats": "workday",
-    "slug": "sanofi",
-    "wd": "wd3",
-    "site": "SanofiCareers"
-  },
-  {
-    "name": "Takeda",
-    "category": "Pharma & Biotech",
-    "ats": "workday",
-    "slug": "takeda",
-    "wd": "wd502",
-    "site": "external"
-  },
-  {
-    "name": "Biogen",
-    "category": "Pharma & Biotech",
-    "ats": "workday",
-    "slug": "biibhr",
-    "wd": "wd3",
-    "site": "external"
-  },
-  {
-    "name": "Vertex Pharmaceuticals",
-    "category": "Pharma & Biotech",
-    "ats": "workday",
-    "slug": "vrtx",
-    "wd": "wd501",
-    "site": "vertex_intern"
-  },
-  {
-    "name": "Vertex Pharmaceuticals",
-    "category": "Pharma & Biotech",
-    "ats": "workday",
-    "slug": "vrtx",
-    "wd": "wd501",
-    "site": "vertex_careers"
-  },
-  {
-    "name": "Lonza",
-    "category": "Pharma & Biotech",
-    "ats": "workday",
-    "slug": "lonza",
-    "wd": "wd3",
-    "site": "lonza_careers"
-  },
-  {
-    "name": "Thermo Fisher Scientific",
-    "category": "Pharma & Biotech",
-    "ats": "workday",
-    "slug": "thermofisher",
-    "wd": "wd5",
-    "site": "ThermoFisherCareers"
-  },
-  {
-    "name": "Genentech (Roche)",
-    "category": "Pharma & Biotech",
-    "ats": "workday",
-    "slug": "roche",
-    "wd": "wd3",
-    "site": "rog-a2o-gene"
-  },
-  {
-    "name": "Abbott",
-    "category": "Pharma & Biotech",
-    "ats": "workday",
-    "slug": "abbott",
-    "wd": "wd5",
-    "site": "abbottcareers"
-  },
-  {
-    "name": "Baxter",
-    "category": "Pharma & Biotech",
-    "ats": "workday",
-    "slug": "baxter",
-    "wd": "wd1",
-    "site": "baxter"
-  },
-  {
-    "name": "BD",
-    "category": "Pharma & Biotech",
-    "ats": "workday",
-    "slug": "bdx",
-    "wd": "wd1",
-    "site": "US_EARLY_TALENT_SITE"
-  },
-  {
-    "name": "Ginkgo Bioworks",
-    "category": "Pharma & Biotech",
-    "ats": "greenhouse",
-    "slug": "ginkgobioworks"
   },
   {
     "name": "Intel",
@@ -639,6 +233,37 @@
     "ats": "oracle",
     "host": "edbz.fa.us2.oraclecloud.com",
     "site": "CX_1"
+  },
+  {
+    "name": "KLA",
+    "category": "Semiconductors & Electronics",
+    "ats": "workday",
+    "slug": "kla",
+    "wd": "wd1",
+    "site": "Search"
+  },
+  {
+    "name": "Analog Devices",
+    "category": "Semiconductors & Electronics",
+    "ats": "workday",
+    "slug": "analogdevices",
+    "wd": "wd1",
+    "site": "External"
+  },
+  {
+    "name": "Wolfspeed",
+    "category": "Semiconductors & Electronics",
+    "ats": "workday",
+    "slug": "cree",
+    "wd": "wd108",
+    "site": "EXT"
+  },
+  {
+    "name": "onsemi",
+    "category": "Semiconductors & Electronics",
+    "ats": "oracle",
+    "host": "hctz.fa.us2.oraclecloud.com",
+    "site": "CX_1001"
   },
   {
     "name": "Redwood Materials",
@@ -699,5 +324,29 @@
     "category": "Batteries, Climate & Nuclear",
     "ats": "lever",
     "slug": "cfsenergy"
+  },
+  {
+    "name": "Radiant",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "ashby",
+    "slug": "radiant"
+  },
+  {
+    "name": "Twelve",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "ashby",
+    "slug": "twelve"
+  },
+  {
+    "name": "Heirloom",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "ashby",
+    "slug": "heirloomcarbon"
+  },
+  {
+    "name": "Charm Industrial",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "lever",
+    "slug": "charmindustrial"
   }
 ]

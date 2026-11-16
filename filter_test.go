@@ -58,6 +58,24 @@ func TestClassify(t *testing.T) {
 		{"Chemical Engineer", "", ""},
 		// Not fooled by "internal"/"international"
 		{"Internal Audit Process Engineer", "", ""},
+		// Fab, environmental and energy roles
+		{"Photolithography Engineering Intern", LevelIntern, FitChemE},
+		{"Wets/Cleans Engineering Intern - Summer 2027", LevelIntern, FitChemE},
+		{"New College Grad - Equipment Engineer", LevelNewGrad, FitChemE},
+		{"Semiconductor Fab Cleanroom Equipment Engineer (2027 New College Graduate)", LevelNewGrad, FitChemE},
+		{"Environmental Health & Safety Intern", LevelIntern, FitChemE},
+		{"Thermal Engineering Intern", LevelIntern, FitChemE},
+		{"2027 Summer Process Engineer Intern - BS or MS (Gloucester, MA)", LevelIntern, FitChemE},
+		// Rejected: graduate-only, non-engineering, operator and EE-design roles
+		{"2027 Drug Substance Engineering Intern (PhD)", "", ""},
+		{"Summer 2027 Process Engineer Intern- Master's (Santa Clara, CA)", "", ""},
+		{"2027 Spring Process Engineer Co-op - Doctorate (Gloucester, MA)", "", ""},
+		{"Industrial Wastewater Treatment Technician, Associates Degree (2027 New College Graduate)", "", ""},
+		{"Chemical Operator - Level 1", "", ""},
+		{"Undergrad Intern – R&D Execution, Operations & Strategy (Summer 2027)", "", ""},
+		{"Intern - Upstream - Petroleum/Reservoir Engineer - AZ", "", ""},
+		{"Design Evaluation Engineering Intern", "", ""},
+		{"Associate Field Applications Engineer - Power Management", "", ""},
 	}
 	for _, c := range cases {
 		level, fit, ok := Classify(c.title, false)

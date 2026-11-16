@@ -33,7 +33,22 @@ var (
 		`pharmaceutical (engineer|manufacturing|sciences?)|drug (product|substance)|api manufacturing|` +
 		// Roles added on request: controls, supply chain and R&D engineering.
 		`controls? (engineer|engineering)|automation (engineer|engineering)|supply chain (engineer|engineering)|` +
-		`(r ?& ?d|research (&|and) development) (engineer|engineering))`)
+		`(r ?& ?d|research (&|and) development) (engineer|engineering)|` +
+		// Fab / cleanroom process and equipment roles.
+		`cleanroom|clean room|nanofab|lithograph|photolitho|metrology|diffusion|wets?/cleans|plating|process integration|yield|` +
+		`(fab|equipment|semiconductor) (engineer|engineering)|` +
+		// Environmental, water and thermal/energy systems roles.
+		`pfas|desalination|water (resources|technolog|engineer)|environmental (health|compliance|safety)|\behs\b|` +
+		`thermal (engineer|engineering|systems)|energy (engineer|engineering|systems)|fuel cell|nuclear|fusion)`)
+
+	// Roles a BS ChemE engineering candidate is not targeting, even when the
+	// title also names a ChemE discipline.
+	reNotFit = regexp.MustCompile(`(?i)\b(ph\.?d|doctorate|doctoral|mba|associates? degree|non[- ]engineering|` +
+		`operators?|technicians?|maintenance specialist|pit crew|` +
+		`oncology|immunology|translational|knowledge management|revenue|strategy|` +
+		`reservoir|drilling|wellsite|subsurface)\b`)
+	reMastersOnly = regexp.MustCompile(`(?i)\bmaster'?s\b`)
+	reBachelors   = regexp.MustCompile(`(?i)\b(bachelor'?s?|bs|undergrad(uate)?)\b`)
 
 	// General engineering early-talent roles a ChemE can apply to (they often
 	// list "Chemical, Mechanical or Electrical Engineering" as eligible majors).
@@ -44,6 +59,7 @@ var (
 	reOtherDiscipline = regexp.MustCompile(`(?i)\b(software|swe|developer|devops|full[- ]stack|front[- ]?end|back[- ]?end|web|mobile|ios|android|cloud|data (engineer|engineering|science|scientist|analyst|analytics)|` +
 		`machine learning|\bml\b|\bai\b|artificial intelligence|cyber|security|it\b|information technology|network|firmware|embedded|fpga|asic|rtl|verification|` +
 		`electrical|electronics?|hardware|rf|antenna|power systems|controls software|mechanical|civil|structural|architect|` +
+		`design evaluation|(field|central|power) applications|algorithm|optical|mechatronics|design engineer|test engineer|` +
 		`aerospace|avionics|industrial design|graphic|ux|ui|product (manager|management|design)|` +
 		`sales|marketing|finance|financial|accounting|audit|tax|treasury|legal|paralegal|hr|human resources|recruit|talent acquisition|` +
 		`supply chain|procurement|purchasing|logistics|buyer|commercial|business|communications|customer|clinical|medical affairs|regulatory affairs|` +
@@ -70,6 +86,9 @@ func Classify(title string, strict bool) (level, fit string, ok bool) {
 		return "", "", false
 	}
 
+	if reNotFit.MatchString(t) || (reMastersOnly.MatchString(t) && !reBachelors.MatchString(t)) {
+		return "", "", false
+	}
 	if reChemE.MatchString(t) {
 		return level, FitChemE, true
 	}

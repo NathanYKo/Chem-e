@@ -4,7 +4,7 @@
 
 [![CI](https://img.shields.io/github/actions/workflow/status/NathanYKo/Chem-e/scrape.yml?label=scrape&style=flat-square)](https://github.com/NathanYKo/Chem-e/actions/workflows/scrape.yml)
 ![Updates](https://img.shields.io/badge/updates-daily-3fb950?style=flat-square)
-![Boards](https://img.shields.io/badge/boards-90-blue?style=flat-square)
+![Boards](https://img.shields.io/badge/boards-47-blue?style=flat-square)
 ![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=flat-square&logo=go&logoColor=white)
 
 The table below is the live list, rewritten on every scrape. Same data: [`JOBS.md`](JOBS.md) · [`data/jobs.csv`](data/jobs.csv) · [`data/jobs.json`](data/jobs.json).
@@ -2423,7 +2423,7 @@ Every link comes straight from the company ATS — Workday, Greenhouse, Lever, A
 | **Roles** | Internships, co-ops, new-grad / early-career (Engineer I, Associate, rotational programs) |
 | **Region** | United States (ambiguous locations are kept; clearly foreign ones are dropped) |
 | **Age** | Posted within the last 30 days by default |
-| **Employers** | 90 boards across chemicals & materials, oil/gas/energy, pharma & biotech, consumer/food/ag, semiconductors, and batteries/climate/nuclear |
+| **Employers** | 47 boards across semiconductors, chemicals & materials, power, and batteries/climate/nuclear |
 
 Inspired by:
 - [zshah101/Automated-List-Of-Summer-2027-and-Fall-2026-Tech-Internships](https://github.com/zshah101/Automated-List-Of-Summer-2027-and-Fall-2026-Tech-Internships) — ATS feeds + accuracy verify
@@ -2468,9 +2468,9 @@ go test ./...
 
 The GitHub Action in [`.github/workflows/scrape.yml`](.github/workflows/scrape.yml) runs daily: `go test` → scrape → `-verify` → commit the refreshed README, `JOBS.md`, and `data/jobs.*`. You can also start it from the **Actions** tab.
 
-## Companies covered (90 boards)
+## Companies covered (47 boards)
 
-Examples: Dow, 3M, Chemours, Corteva, Air Products, Albemarle, PPG, Honeywell, Sherwin-Williams, Chevron, ConocoPhillips, Marathon, Oxy, Shell, BP, P&G, Clorox, Kraft Heinz, Pfizer, Merck, Lilly, J&J, AbbVie, Amgen, Intel, Applied Materials, Micron, Redwood Materials, Plug Power, X-energy and more. Full list: [`data/companies.json`](data/companies.json).
+Examples: Dow, 3M, Chemours, Corteva, Air Products, Albemarle, PPG, Honeywell, Sherwin-Williams, Intel, Applied Materials, Micron, GlobalFoundries, Entegris, KLA, Wolfspeed, GE Vernova, Redwood Materials, Plug Power, X-energy and more. Full list: [`data/companies.json`](data/companies.json).
 
 ### Adding a company
 

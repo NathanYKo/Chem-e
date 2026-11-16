@@ -1,6 +1,9 @@
 package main
 
-import "testing"
+import (
+	"testing"
+	"time"
+)
 
 func TestClassify(t *testing.T) {
 	cases := []struct {
@@ -94,5 +97,41 @@ func TestIsLikelyUS(t *testing.T) {
 		if IsLikelyUS(l) {
 			t.Errorf("%q should not be US", l)
 		}
+	}
+}
+
+func TestFilterRecent(t *testing.T) {
+	now, _ := time.Parse("2006-01-02", "2026-11-16")
+	jobs := []Job{
+		{ID: "a", Posted: "2026-11-15"},                    // 1 day
+		{ID: "b", Posted: "2026-11-01"},                    // 15 days
+		{ID: "c", Posted: "2026-09-01"},                    // old
+		{ID: "d", Posted30: true, FirstSeen: "2026-11-16"}, // Workday "30+ days"
+		{ID: "e", FirstSeen: "2026-11-16"},                 // no date: keep
+	}
+	keep := func(max int) string {
+		var ids string
+		for _, j := range filterRecent(append([]Job(nil), jobs...), max, now) {
+			ids += j.ID
+		}
+		return ids
+	}
+	if got := keep(7); got != "ae" {
+		t.Errorf("max-age 7: got %q", got)
+	}
+	if got := keep(30); got != "abe" {
+		t.Errorf("max-age 30: got %q", got)
+	}
+	if got := keep(0); got != "abcde" {
+		t.Errorf("no limit: got %q", got)
+	}
+	if l := ageLabel(jobs[0], now); l != "1d" {
+		t.Errorf("label %q", l)
+	}
+	if l := ageLabel(jobs[3], now); l != "30d+" {
+		t.Errorf("label %q", l)
+	}
+	if l := ageLabel(jobs[4], now); l != "~today" {
+		t.Errorf("label %q", l)
 	}
 }

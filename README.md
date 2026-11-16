@@ -11,6 +11,7 @@ The design borrows from two projects:
 ```bash
 go run .                     # scrape every board in data/companies.json
 go run . -only dow           # just one company (substring match)
+go run . -max-age 7          # only roles posted in the last week
 go run . -strict             # only titles that name a ChemE discipline
 go run . -all-locations      # keep non-US roles too
 go test ./...
@@ -20,6 +21,7 @@ go test ./...
 | --- | --- | --- |
 | `-companies` | `data/companies.json` | Board list |
 | `-out` | `.` | Where `JOBS.md` and `data/` are written |
+| `-max-age` | 30 | Only roles posted in the last N days (`0` = no limit) |
 | `-strict` | off | Drop the generic "Engineering Intern" ⚙️ roles |
 | `-all-locations` | off | Keep roles outside the US |
 | `-max-pages` | 5 | Pages per search term on Workday/Oracle/SmartRecruiters |

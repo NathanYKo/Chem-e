@@ -30,9 +30,10 @@ type Job struct {
 	Location  string `json:"location"`
 	URL       string `json:"url"`
 	Source    string `json:"source"`
-	Posted    string `json:"posted,omitempty"` // YYYY-MM-DD when the ATS tells us
-	Level     string `json:"level"`            // Internship | Co-op | New Grad / Early Career
-	Fit       string `json:"fit"`              // ChemE | Engineering
+	Posted    string `json:"posted,omitempty"`         // YYYY-MM-DD when the ATS tells us
+	Posted30  bool   `json:"posted_30_plus,omitempty"` // Workday said "30+ Days Ago": at least 30 days old, exact date unknown
+	Level     string `json:"level"`                    // Internship | Co-op | New Grad / Early Career
+	Fit       string `json:"fit"`                      // ChemE | Engineering
 	FirstSeen string `json:"first_seen"`
 }
 

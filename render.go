@@ -7,6 +7,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"time"
 )
 
 func writeOutputs(outDir string, jobs []Job, boards, failed int, today string) error {
@@ -36,9 +37,9 @@ func writeCSV(path string, jobs []Job) error {
 	}
 	defer f.Close()
 	w := csv.NewWriter(f)
-	_ = w.Write([]string{"company", "category", "title", "level", "fit", "location", "posted", "first_seen", "source", "url"})
+	_ = w.Write([]string{"company", "category", "title", "level", "fit", "location", "posted", "posted_30_plus", "first_seen", "source", "url"})
 	for _, j := range jobs {
-		_ = w.Write([]string{j.Company, j.Category, j.Title, j.Level, j.Fit, j.Location, j.Posted, j.FirstSeen, j.Source, j.URL})
+		_ = w.Write([]string{j.Company, j.Category, j.Title, j.Level, j.Fit, j.Location, j.Posted, fmt.Sprint(j.Posted30), j.FirstSeen, j.Source, j.URL})
 	}
 	w.Flush()
 	return w.Error()
@@ -58,6 +59,10 @@ func truncate(s string, n int) string {
 }
 
 func renderMarkdown(jobs []Job, boards, failed int, today string) string {
+	now, err := time.Parse("2006-01-02", today)
+	if err != nil {
+		now = time.Now().UTC()
+	}
 	var b strings.Builder
 	fmt.Fprintf(&b, "# ChemE Internships, Co-ops & New Grad Roles\n\n")
 	fmt.Fprintf(&b, "_Updated %s · %d roles · %d company boards scraped", today, len(jobs), boards)
@@ -85,16 +90,13 @@ func renderMarkdown(jobs []Job, boards, failed int, today string) string {
 			b.WriteString("_None right now._\n\n")
 			continue
 		}
-		b.WriteString("| Company | Role | Fit | Location | Posted | Sector |\n| --- | --- | :-: | --- | --- | --- |\n")
+		b.WriteString("| Company | Role | Fit | Location | Age | Sector |\n| --- | --- | :-: | --- | --- | --- |\n")
 		for _, j := range rows {
 			fit := "⚙️"
 			if j.Fit == FitChemE {
 				fit = "🧪"
 			}
-			posted := j.Posted
-			if posted == "" {
-				posted = "seen " + j.FirstSeen
-			}
+			posted := ageLabel(j, now)
 			loc := j.Location
 			if loc == "" {
 				loc = "—"
@@ -106,4 +108,24 @@ func renderMarkdown(jobs []Job, boards, failed int, today string) string {
 		b.WriteString("\n")
 	}
 	return b.String()
+}
+
+// ageLabel renders "today", "3d", or "30d+" the way the big job lists do.
+// Dates we only know from first-seen get a "~" since the role may be older.
+func ageLabel(j Job, now time.Time) string {
+	if j.Posted == "" && j.Posted30 {
+		return "30d+"
+	}
+	a := ageDays(j, now)
+	if a < 0 {
+		return "—"
+	}
+	label := fmt.Sprintf("%dd", a)
+	if a == 0 {
+		label = "today"
+	}
+	if j.Posted == "" {
+		label = "~" + label
+	}
+	return label
 }

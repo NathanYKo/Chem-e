@@ -29,6 +29,7 @@ type options struct {
 	maxPages      int
 	timeout       time.Duration
 	only          string
+	maxAge        int
 }
 
 func main() {
@@ -41,6 +42,7 @@ func main() {
 	flag.IntVar(&o.boardWorkers, "boards", 8, "boards scraped in parallel")
 	flag.IntVar(&o.maxPages, "max-pages", 5, "max pages per search term on Workday/Oracle/SmartRecruiters")
 	flag.DurationVar(&o.timeout, "timeout", 30*time.Second, "per-request timeout")
+	flag.IntVar(&o.maxAge, "max-age", 30, "only keep roles posted within this many days (0 = no limit)")
 	flag.StringVar(&o.only, "only", "", "only scrape companies whose name contains this (case-insensitive)")
 	flag.Parse()
 
@@ -97,6 +99,7 @@ func run(ctx context.Context, o options) error {
 
 	today := time.Now().UTC().Format("2006-01-02")
 	matched = carryFirstSeen(matched, jsonPath, today)
+	matched = filterRecent(matched, o.maxAge, time.Now().UTC())
 	sortJobs(matched)
 
 	if err := writeOutputs(o.outDir, matched, len(companies), len(failed), today); err != nil {
@@ -267,13 +270,57 @@ func carryFirstSeen(jobs []Job, prevPath, today string) []Job {
 	return jobs
 }
 
+// postedDate is the best date we have for a role: the ATS posting date, or
+// the day this scraper first saw it.
+func postedDate(j Job) string {
+	if j.Posted != "" {
+		return j.Posted
+	}
+	return j.FirstSeen
+}
+
+// ageDays is how many days ago the role was posted; -1 if unknown.
+func ageDays(j Job, now time.Time) int {
+	d, err := time.Parse("2006-01-02", postedDate(j))
+	if err != nil {
+		return -1
+	}
+	n := int(now.Sub(d).Hours() / 24)
+	if j.Posted == "" && j.Posted30 && n < 30 {
+		n = 30 // Workday only told us "30+ days"
+	}
+	if n < 0 {
+		n = 0
+	}
+	return n
+}
+
+// filterRecent drops roles older than maxAge days. Roles with no date at all
+// are kept, since we can't prove they are old.
+func filterRecent(jobs []Job, maxAge int, now time.Time) []Job {
+	if maxAge <= 0 {
+		return jobs
+	}
+	out := jobs[:0]
+	for _, j := range jobs {
+		if j.Posted == "" && j.Posted30 && maxAge <= 30 {
+			continue
+		}
+		if a := ageDays(j, now); a >= 0 && a > maxAge {
+			continue
+		}
+		out = append(out, j)
+	}
+	return out
+}
+
 // sortJobs: newest first (posted date, falling back to first-seen), then company.
 func sortJobs(jobs []Job) {
 	date := func(j Job) string {
-		if j.Posted != "" {
-			return j.Posted
+		if j.Posted == "" && j.Posted30 {
+			return "0000" // vague "30+ days" sorts last
 		}
-		return j.FirstSeen
+		return postedDate(j)
 	}
 	sort.SliceStable(jobs, func(a, b int) bool {
 		da, db := date(jobs[a]), date(jobs[b])

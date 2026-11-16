@@ -69,7 +69,7 @@ func workdayURLs(co Company) (api, base string) {
 var daysAgo = regexp.MustCompile(`(?i)(\d+)\s*\+?\s*days?\s+ago`)
 
 // workdayPosted turns "Posted 6 Days Ago" into a date. "30+ Days Ago" is too
-// vague to be a date, so it is left blank.
+// vague to be a date, so it returns "" and is reported via workday30Plus.
 func workdayPosted(text string, now time.Time) string {
 	l := strings.ToLower(text)
 	switch {
@@ -88,6 +88,8 @@ func workdayPosted(text string, now time.Time) string {
 	}
 	return ""
 }
+
+func workday30Plus(text string) bool { return strings.Contains(text, "30+") }
 
 func fetchWorkday(ctx context.Context, c *Client, co Company, maxPages int) ([]Job, error) {
 	api, base := workdayURLs(co)
@@ -116,7 +118,7 @@ func fetchWorkday(ctx context.Context, c *Client, co Company, maxPages int) ([]J
 				}
 				seen[id] = Job{ID: id, Company: co.Name, Category: co.Category,
 					Title: p.Title, Location: p.LocationsText, URL: base + p.ExternalPath,
-					Source: "workday", Posted: workdayPosted(p.PostedOn, now)}
+					Source: "workday", Posted: workdayPosted(p.PostedOn, now), Posted30: workday30Plus(p.PostedOn)}
 			}
 			if len(r.JobPostings) < workdayPage || (total > 0 && offset+len(r.JobPostings) >= total) {
 				break

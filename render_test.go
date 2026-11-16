@@ -65,26 +65,36 @@ func TestWriteOutputsSkipsMissingReadme(t *testing.T) {
 func TestRenderMarkdownJumpLinksAndDatePosted(t *testing.T) {
 	jobs := []Job{
 		{Company: "Dow", Title: "Intern", URL: "https://ex/i", Level: LevelIntern, Fit: FitChemE, Location: "TX", Category: "Chemicals", Posted: "2026-11-15"},
+		{Company: "Dow", Title: "Second Intern", URL: "https://ex/i2", Level: LevelIntern, Fit: FitEng, Location: "MI", Category: "Chemicals", Posted: "2026-11-14"},
 		{Company: "Merck", Title: "Co-op", URL: "https://ex/c", Level: LevelCoop, Fit: FitEng, Location: "PA", Category: "Pharma", FirstSeen: "2026-11-10"},
 		{Company: "Amgen", Title: "New Grad", URL: "https://ex/n", Level: LevelNewGrad, Fit: FitChemE, Location: "CA", Category: "Pharma", Posted30: true, FirstSeen: "2026-11-16"},
 	}
 	md := renderMarkdown(jobs, 3, 0, "2026-11-16")
 	for _, want := range []string{
-		"**Jump to:** [Internships (1)](#internships) · [Co-ops (1)](#co-ops) · [New Grad / Early Career (1)](#new-grad)",
+		"**Jump to:** [Internships (2)](#internships) · [Co-ops (1)](#co-ops) · [New Grad / Early Career (1)](#new-grad)",
 		`<a id="internships"></a>`,
 		`<a id="co-ops"></a>`,
 		`<a id="new-grad"></a>`,
-		"| Company | Role | Fit | Location | Date posted | Sector |",
-		"| --- | --- | :-: | --- | :-: | --- |",
-		"| Dow | [Intern](https://ex/i) | 🧪 | TX | 2026-11-15 | Chemicals |",
-		"| Merck | [Co-op](https://ex/c) | ⚙️ | PA | 2026-11-10 | Pharma |",
-		"| Amgen | [New Grad](https://ex/n) | 🧪 | CA | — | Pharma |",
+		`<th>Company</th>`,
+		`<th>Role</th>`,
+		`<th>Location</th>`,
+		`<th align="center">Application</th>`,
+		`<th align="center">Date posted</th>`,
+		`valign="top"`,
+		`<td valign="top"><strong>Dow</strong></td>`,
+		`<td valign="top">↳</td>`,
+		`🧪 Intern`,
+		`⚙️ Second Intern`,
+		`<a href="https://ex/i">Apply</a>`,
+		`<td valign="top" align="center">Nov 15</td>`,
+		`<td valign="top" align="center">Nov 10</td>`,
+		`<td valign="top" align="center">—</td>`,
 	} {
 		if !strings.Contains(md, want) {
 			t.Errorf("missing %q\n%s", want, md)
 		}
 	}
-	for _, bad := range []string{"| Age |", "today", "1d", "~"} {
+	for _, bad := range []string{"| Age |", "| Sector |", "2026-11-15", "today", "<th>Fit</th>", "<th>Sector</th>"} {
 		if strings.Contains(md, bad) {
 			t.Errorf("unexpected %q in:\n%s", bad, md)
 		}
@@ -96,8 +106,8 @@ func TestDatePostedLabel(t *testing.T) {
 		j    Job
 		want string
 	}{
-		{Job{Posted: "2026-11-15"}, "2026-11-15"},
-		{Job{FirstSeen: "2026-11-10"}, "2026-11-10"},
+		{Job{Posted: "2026-11-15"}, "Nov 15"},
+		{Job{FirstSeen: "2026-11-10"}, "Nov 10"},
 		{Job{Posted30: true, FirstSeen: "2026-11-16"}, "—"},
 		{Job{}, "—"},
 	}

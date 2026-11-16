@@ -4,9 +4,11 @@ import (
 	"encoding/csv"
 	"encoding/json"
 	"fmt"
+	"html"
 	"os"
 	"path/filepath"
 	"strings"
+	"time"
 )
 
 func writeOutputs(outDir string, jobs []Job, boards, failed int, today string) error {
@@ -97,11 +99,6 @@ func writeCSV(path string, jobs []Job) error {
 	return w.Error()
 }
 
-func mdEscape(s string) string {
-	s = strings.ReplaceAll(s, "|", "\\|")
-	return strings.ReplaceAll(s, "\n", " ")
-}
-
 func truncate(s string, n int) string {
 	r := []rune(s)
 	if len(r) <= n {
@@ -145,34 +142,54 @@ func renderMarkdown(jobs []Job, boards, failed int, today string) string {
 			b.WriteString("_None right now._\n\n")
 			continue
 		}
-		b.WriteString("| Company | Role | Fit | Location | Date posted | Sector |\n| --- | --- | :-: | --- | :-: | --- |\n")
-		for _, j := range rows {
-			fit := "⚙️"
-			if j.Fit == FitChemE {
-				fit = "🧪"
-			}
-			posted := datePostedLabel(j)
-			loc := j.Location
-			if loc == "" {
-				loc = "—"
-			}
-			fmt.Fprintf(&b, "| %s | [%s](%s) | %s | %s | %s | %s |\n",
-				mdEscape(j.Company), mdEscape(j.Title), j.URL, fit,
-				mdEscape(truncate(loc, 45)), posted, j.Category)
-		}
-		b.WriteString("\n")
+		writeJobTable(&b, rows)
 	}
 	return b.String()
 }
 
-// datePostedLabel is the calendar date shown in the board: ATS posted date,
-// else first-seen. Vague Workday "30+ days" and missing dates render as "—".
+func writeJobTable(b *strings.Builder, rows []Job) {
+	b.WriteString("<table>\n<thead>\n<tr>\n")
+	b.WriteString("<th>Company</th>\n<th>Role</th>\n<th>Location</th>\n")
+	b.WriteString("<th align=\"center\">Application</th>\n<th align=\"center\">Date posted</th>\n")
+	b.WriteString("</tr>\n</thead>\n<tbody>\n")
+	prev := ""
+	for _, j := range rows {
+		fit := "⚙️"
+		if j.Fit == FitChemE {
+			fit = "🧪"
+		}
+		loc := j.Location
+		if loc == "" {
+			loc = "—"
+		}
+		company := "<strong>" + html.EscapeString(j.Company) + "</strong>"
+		if j.Company == prev {
+			company = "↳"
+		}
+		prev = j.Company
+		fmt.Fprintf(b, "<tr>\n<td valign=\"top\">%s</td>\n", company)
+		fmt.Fprintf(b, "<td valign=\"top\">%s %s</td>\n", fit, html.EscapeString(j.Title))
+		fmt.Fprintf(b, "<td valign=\"top\">%s</td>\n", html.EscapeString(truncate(loc, 45)))
+		fmt.Fprintf(b, "<td valign=\"top\" align=\"center\"><a href=\"%s\">Apply</a></td>\n", html.EscapeString(j.URL))
+		fmt.Fprintf(b, "<td valign=\"top\" align=\"center\">%s</td>\n</tr>\n", html.EscapeString(datePostedLabel(j)))
+	}
+	b.WriteString("</tbody>\n</table>\n\n")
+}
+
+// datePostedLabel is the short date shown in the board (e.g. "Nov 16"):
+// ATS posted date, else first-seen. Vague Workday "30+ days" and missing
+// dates render as "—".
 func datePostedLabel(j Job) string {
 	if j.Posted == "" && j.Posted30 {
 		return "—"
 	}
-	if d := postedDate(j); d != "" {
+	d := postedDate(j)
+	if d == "" {
+		return "—"
+	}
+	t, err := time.Parse("2006-01-02", d)
+	if err != nil {
 		return d
 	}
-	return "—"
+	return t.Format("Jan 2")
 }

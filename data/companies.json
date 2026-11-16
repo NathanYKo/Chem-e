@@ -1,0 +1,703 @@
+[
+  {
+    "name": "Dow",
+    "category": "Chemicals & Materials",
+    "ats": "workday",
+    "slug": "dow",
+    "wd": "wd1",
+    "site": "ExternalCareers"
+  },
+  {
+    "name": "3M",
+    "category": "Chemicals & Materials",
+    "ats": "workday",
+    "slug": "3m",
+    "wd": "wd1",
+    "site": "Search"
+  },
+  {
+    "name": "Chemours",
+    "category": "Chemicals & Materials",
+    "ats": "workday",
+    "slug": "chemours",
+    "wd": "wd103",
+    "site": "Chemours"
+  },
+  {
+    "name": "Corteva",
+    "category": "Chemicals & Materials",
+    "ats": "workday",
+    "slug": "corteva",
+    "wd": "wd5",
+    "site": "corteva"
+  },
+  {
+    "name": "Huntsman",
+    "category": "Chemicals & Materials",
+    "ats": "workday",
+    "slug": "huntsman",
+    "wd": "wd1",
+    "site": "Huntsman"
+  },
+  {
+    "name": "Westlake",
+    "category": "Chemicals & Materials",
+    "ats": "workday",
+    "slug": "westlake",
+    "wd": "wd1",
+    "site": "westlake"
+  },
+  {
+    "name": "Albemarle",
+    "category": "Chemicals & Materials",
+    "ats": "workday",
+    "slug": "albemarle",
+    "wd": "wd5",
+    "site": "External"
+  },
+  {
+    "name": "Air Products",
+    "category": "Chemicals & Materials",
+    "ats": "workday",
+    "slug": "airproducts",
+    "wd": "wd5",
+    "site": "AP0001"
+  },
+  {
+    "name": "Air Liquide",
+    "category": "Chemicals & Materials",
+    "ats": "workday",
+    "slug": "airliquidehr",
+    "wd": "wd3",
+    "site": "AirLiquideExternalCareer"
+  },
+  {
+    "name": "Ecolab",
+    "category": "Chemicals & Materials",
+    "ats": "workday",
+    "slug": "ecolab",
+    "wd": "wd1",
+    "site": "ecolab_external"
+  },
+  {
+    "name": "PPG",
+    "category": "Chemicals & Materials",
+    "ats": "workday",
+    "slug": "ppg",
+    "wd": "wd5",
+    "site": "PPG_CAREERS"
+  },
+  {
+    "name": "Evonik",
+    "category": "Chemicals & Materials",
+    "ats": "workday",
+    "slug": "evonik",
+    "wd": "wd3",
+    "site": "External_Careers"
+  },
+  {
+    "name": "Covestro",
+    "category": "Chemicals & Materials",
+    "ats": "workday",
+    "slug": "covestro",
+    "wd": "wd3",
+    "site": "cov_external"
+  },
+  {
+    "name": "Johnson Matthey",
+    "category": "Chemicals & Materials",
+    "ats": "workday",
+    "slug": "matthey",
+    "wd": "wd3",
+    "site": "Ext_Career_Site"
+  },
+  {
+    "name": "Ashland",
+    "category": "Chemicals & Materials",
+    "ats": "workday",
+    "slug": "ashland",
+    "wd": "wd12",
+    "site": "AshlandCareers1"
+  },
+  {
+    "name": "Axalta",
+    "category": "Chemicals & Materials",
+    "ats": "workday",
+    "slug": "axalta",
+    "wd": "wd1",
+    "site": "axalta"
+  },
+  {
+    "name": "IFF",
+    "category": "Chemicals & Materials",
+    "ats": "workday",
+    "slug": "iff",
+    "wd": "wd5",
+    "site": "IFF_Careers"
+  },
+  {
+    "name": "DuBois Chemicals",
+    "category": "Chemicals & Materials",
+    "ats": "workday",
+    "slug": "duboischemicals",
+    "wd": "wd1",
+    "site": "external"
+  },
+  {
+    "name": "Mosaic",
+    "category": "Chemicals & Materials",
+    "ats": "workday",
+    "slug": "mosaic",
+    "wd": "wd5",
+    "site": "mosaic"
+  },
+  {
+    "name": "Alcoa",
+    "category": "Chemicals & Materials",
+    "ats": "workday",
+    "slug": "alcoa",
+    "wd": "wd5",
+    "site": "Careers"
+  },
+  {
+    "name": "Amcor",
+    "category": "Chemicals & Materials",
+    "ats": "workday",
+    "slug": "amcor",
+    "wd": "wd5",
+    "site": "amcor_external_career_site"
+  },
+  {
+    "name": "Honeywell",
+    "category": "Chemicals & Materials",
+    "ats": "oracle",
+    "host": "ibqbjb.fa.ocs.oraclecloud.com",
+    "site": "CX_1"
+  },
+  {
+    "name": "Sherwin-Williams",
+    "category": "Chemicals & Materials",
+    "ats": "oracle",
+    "host": "ejhp.fa.us6.oraclecloud.com",
+    "site": "CX_2"
+  },
+  {
+    "name": "Chevron",
+    "category": "Oil, Gas & Energy",
+    "ats": "workday",
+    "slug": "chevron",
+    "wd": "wd5",
+    "site": "University"
+  },
+  {
+    "name": "ConocoPhillips",
+    "category": "Oil, Gas & Energy",
+    "ats": "workday",
+    "slug": "conocophillips",
+    "wd": "wd1",
+    "site": "External"
+  },
+  {
+    "name": "Marathon Petroleum",
+    "category": "Oil, Gas & Energy",
+    "ats": "workday",
+    "slug": "mpc",
+    "wd": "wd1",
+    "site": "MPCCareers"
+  },
+  {
+    "name": "Occidental (Oxy)",
+    "category": "Oil, Gas & Energy",
+    "ats": "workday",
+    "slug": "oxy",
+    "wd": "wd5",
+    "site": "UniversityRelations"
+  },
+  {
+    "name": "Occidental (Oxy)",
+    "category": "Oil, Gas & Energy",
+    "ats": "workday",
+    "slug": "oxy",
+    "wd": "wd5",
+    "site": "Corporate"
+  },
+  {
+    "name": "Shell",
+    "category": "Oil, Gas & Energy",
+    "ats": "workday",
+    "slug": "shell",
+    "wd": "wd3",
+    "site": "ShellCareers"
+  },
+  {
+    "name": "BP",
+    "category": "Oil, Gas & Energy",
+    "ats": "workday",
+    "slug": "bpinternational",
+    "wd": "wd3",
+    "site": "bpEarlyCareers"
+  },
+  {
+    "name": "BP",
+    "category": "Oil, Gas & Energy",
+    "ats": "workday",
+    "slug": "bpinternational",
+    "wd": "wd3",
+    "site": "bpCareers"
+  },
+  {
+    "name": "Baker Hughes",
+    "category": "Oil, Gas & Energy",
+    "ats": "workday",
+    "slug": "bakerhughes",
+    "wd": "wd5",
+    "site": "BakerHughes"
+  },
+  {
+    "name": "KBR",
+    "category": "Oil, Gas & Energy",
+    "ats": "workday",
+    "slug": "kbr",
+    "wd": "wd5",
+    "site": "KBR_Careers"
+  },
+  {
+    "name": "GE Vernova",
+    "category": "Oil, Gas & Energy",
+    "ats": "workday",
+    "slug": "gevernova",
+    "wd": "wd5",
+    "site": "vernova_externalsite"
+  },
+  {
+    "name": "Procter & Gamble",
+    "category": "Consumer, Food & Ag",
+    "ats": "workday",
+    "slug": "pg",
+    "wd": "wd5",
+    "site": "1000"
+  },
+  {
+    "name": "Clorox",
+    "category": "Consumer, Food & Ag",
+    "ats": "workday",
+    "slug": "clorox",
+    "wd": "wd1",
+    "site": "Clorox",
+    "host": "wd1.myworkdaysite.com"
+  },
+  {
+    "name": "SC Johnson",
+    "category": "Consumer, Food & Ag",
+    "ats": "workday",
+    "slug": "scj",
+    "wd": "wd5",
+    "site": "External_Career_Site"
+  },
+  {
+    "name": "Kraft Heinz",
+    "category": "Consumer, Food & Ag",
+    "ats": "workday",
+    "slug": "heinz",
+    "wd": "wd1",
+    "site": "KraftHeinz_Careers_UR"
+  },
+  {
+    "name": "Kraft Heinz",
+    "category": "Consumer, Food & Ag",
+    "ats": "workday",
+    "slug": "heinz",
+    "wd": "wd1",
+    "site": "KraftHeinz_Careers"
+  },
+  {
+    "name": "Mars",
+    "category": "Consumer, Food & Ag",
+    "ats": "workday",
+    "slug": "mars",
+    "wd": "wd3",
+    "site": "external"
+  },
+  {
+    "name": "Mondelez",
+    "category": "Consumer, Food & Ag",
+    "ats": "workday",
+    "slug": "mdlz",
+    "wd": "wd3",
+    "site": "External",
+    "host": "wd3.myworkdaysite.com"
+  },
+  {
+    "name": "Unilever",
+    "category": "Consumer, Food & Ag",
+    "ats": "workday",
+    "slug": "unilever",
+    "wd": "wd3",
+    "site": "Unilever_Early_Careers"
+  },
+  {
+    "name": "Coca-Cola",
+    "category": "Consumer, Food & Ag",
+    "ats": "workday",
+    "slug": "coke",
+    "wd": "wd1",
+    "site": "coca-cola-careers"
+  },
+  {
+    "name": "Anheuser-Busch",
+    "category": "Consumer, Food & Ag",
+    "ats": "workday",
+    "slug": "abinbev",
+    "wd": "wd1",
+    "site": "USA"
+  },
+  {
+    "name": "Ingredion",
+    "category": "Consumer, Food & Ag",
+    "ats": "workday",
+    "slug": "ingredion",
+    "wd": "wd1",
+    "site": "IngredionCareers"
+  },
+  {
+    "name": "Tyson Foods",
+    "category": "Consumer, Food & Ag",
+    "ats": "workday",
+    "slug": "tysonfoods",
+    "wd": "wd5",
+    "site": "TSN"
+  },
+  {
+    "name": "Campbell's",
+    "category": "Consumer, Food & Ag",
+    "ats": "workday",
+    "slug": "campbellsoup",
+    "wd": "wd5",
+    "site": "externalcareers_globalsite"
+  },
+  {
+    "name": "Conagra Brands",
+    "category": "Consumer, Food & Ag",
+    "ats": "workday",
+    "slug": "conagrabrands",
+    "wd": "wd1",
+    "site": "Careers_US"
+  },
+  {
+    "name": "J.M. Smucker",
+    "category": "Consumer, Food & Ag",
+    "ats": "workday",
+    "slug": "smucker",
+    "wd": "wd5",
+    "site": "US_External_Careers"
+  },
+  {
+    "name": "Pfizer",
+    "category": "Pharma & Biotech",
+    "ats": "workday",
+    "slug": "pfizer",
+    "wd": "wd1",
+    "site": "PfizerCareers"
+  },
+  {
+    "name": "Merck",
+    "category": "Pharma & Biotech",
+    "ats": "workday",
+    "slug": "msd",
+    "wd": "wd5",
+    "site": "searchjobs"
+  },
+  {
+    "name": "Eli Lilly",
+    "category": "Pharma & Biotech",
+    "ats": "workday",
+    "slug": "lilly",
+    "wd": "wd5",
+    "site": "LLY"
+  },
+  {
+    "name": "Johnson & Johnson",
+    "category": "Pharma & Biotech",
+    "ats": "workday",
+    "slug": "jj",
+    "wd": "wd5",
+    "site": "JJ"
+  },
+  {
+    "name": "Bristol Myers Squibb",
+    "category": "Pharma & Biotech",
+    "ats": "workday",
+    "slug": "bristolmyerssquibb",
+    "wd": "wd5",
+    "site": "bms"
+  },
+  {
+    "name": "Amgen",
+    "category": "Pharma & Biotech",
+    "ats": "workday",
+    "slug": "amgen",
+    "wd": "wd1",
+    "site": "careers"
+  },
+  {
+    "name": "Gilead",
+    "category": "Pharma & Biotech",
+    "ats": "workday",
+    "slug": "gilead",
+    "wd": "wd1",
+    "site": "gileadcareers"
+  },
+  {
+    "name": "Regeneron",
+    "category": "Pharma & Biotech",
+    "ats": "workday",
+    "slug": "regeneron",
+    "wd": "wd1",
+    "site": "Careers"
+  },
+  {
+    "name": "Moderna",
+    "category": "Pharma & Biotech",
+    "ats": "workday",
+    "slug": "modernatx",
+    "wd": "wd1",
+    "site": "M_tx"
+  },
+  {
+    "name": "AbbVie",
+    "category": "Pharma & Biotech",
+    "ats": "smartrecruiters",
+    "slug": "AbbVie"
+  },
+  {
+    "name": "AstraZeneca",
+    "category": "Pharma & Biotech",
+    "ats": "workday",
+    "slug": "astrazeneca",
+    "wd": "wd3",
+    "site": "Careers"
+  },
+  {
+    "name": "GSK",
+    "category": "Pharma & Biotech",
+    "ats": "workday",
+    "slug": "gsk",
+    "wd": "wd5",
+    "site": "GSKCareers"
+  },
+  {
+    "name": "Novartis",
+    "category": "Pharma & Biotech",
+    "ats": "workday",
+    "slug": "novartis",
+    "wd": "wd3",
+    "site": "Novartis_Careers"
+  },
+  {
+    "name": "Sanofi",
+    "category": "Pharma & Biotech",
+    "ats": "workday",
+    "slug": "sanofi",
+    "wd": "wd3",
+    "site": "SanofiCareers"
+  },
+  {
+    "name": "Takeda",
+    "category": "Pharma & Biotech",
+    "ats": "workday",
+    "slug": "takeda",
+    "wd": "wd3",
+    "site": "external"
+  },
+  {
+    "name": "Biogen",
+    "category": "Pharma & Biotech",
+    "ats": "workday",
+    "slug": "biibhr",
+    "wd": "wd3",
+    "site": "external"
+  },
+  {
+    "name": "Vertex Pharmaceuticals",
+    "category": "Pharma & Biotech",
+    "ats": "workday",
+    "slug": "vrtx",
+    "wd": "wd501",
+    "site": "vertex_intern"
+  },
+  {
+    "name": "Vertex Pharmaceuticals",
+    "category": "Pharma & Biotech",
+    "ats": "workday",
+    "slug": "vrtx",
+    "wd": "wd501",
+    "site": "vertex_careers"
+  },
+  {
+    "name": "Lonza",
+    "category": "Pharma & Biotech",
+    "ats": "workday",
+    "slug": "lonza",
+    "wd": "wd3",
+    "site": "lonza_careers"
+  },
+  {
+    "name": "Thermo Fisher Scientific",
+    "category": "Pharma & Biotech",
+    "ats": "workday",
+    "slug": "thermofisher",
+    "wd": "wd5",
+    "site": "ThermoFisherCareers"
+  },
+  {
+    "name": "Genentech (Roche)",
+    "category": "Pharma & Biotech",
+    "ats": "workday",
+    "slug": "roche",
+    "wd": "wd3",
+    "site": "rog-a2o-gene"
+  },
+  {
+    "name": "Abbott",
+    "category": "Pharma & Biotech",
+    "ats": "workday",
+    "slug": "abbott",
+    "wd": "wd5",
+    "site": "abbottcareers"
+  },
+  {
+    "name": "Baxter",
+    "category": "Pharma & Biotech",
+    "ats": "workday",
+    "slug": "baxter",
+    "wd": "wd1",
+    "site": "baxter"
+  },
+  {
+    "name": "BD",
+    "category": "Pharma & Biotech",
+    "ats": "workday",
+    "slug": "bdx",
+    "wd": "wd1",
+    "site": "US_EARLY_TALENT_SITE"
+  },
+  {
+    "name": "Ginkgo Bioworks",
+    "category": "Pharma & Biotech",
+    "ats": "greenhouse",
+    "slug": "ginkgobioworks"
+  },
+  {
+    "name": "Intel",
+    "category": "Semiconductors & Electronics",
+    "ats": "workday",
+    "slug": "intel",
+    "wd": "wd1",
+    "site": "external"
+  },
+  {
+    "name": "Applied Materials",
+    "category": "Semiconductors & Electronics",
+    "ats": "workday",
+    "slug": "amat",
+    "wd": "wd1",
+    "site": "External"
+  },
+  {
+    "name": "Micron",
+    "category": "Semiconductors & Electronics",
+    "ats": "workday",
+    "slug": "micron",
+    "wd": "wd1",
+    "site": "External"
+  },
+  {
+    "name": "GlobalFoundries",
+    "category": "Semiconductors & Electronics",
+    "ats": "workday",
+    "slug": "globalfoundries",
+    "wd": "wd1",
+    "site": "External"
+  },
+  {
+    "name": "Entegris",
+    "category": "Semiconductors & Electronics",
+    "ats": "workday",
+    "slug": "entegris",
+    "wd": "wd1",
+    "site": "entegriscareers"
+  },
+  {
+    "name": "Samsung Semiconductor",
+    "category": "Semiconductors & Electronics",
+    "ats": "greenhouse",
+    "slug": "samsungsemiconductor"
+  },
+  {
+    "name": "Texas Instruments",
+    "category": "Semiconductors & Electronics",
+    "ats": "oracle",
+    "host": "edbz.fa.us2.oraclecloud.com",
+    "site": "CX_1"
+  },
+  {
+    "name": "Redwood Materials",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "greenhouse",
+    "slug": "redwoodmaterials"
+  },
+  {
+    "name": "Sila",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "greenhouse",
+    "slug": "silananotechnologies"
+  },
+  {
+    "name": "Antora Energy",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "greenhouse",
+    "slug": "antora"
+  },
+  {
+    "name": "Bloom Energy",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "workday",
+    "slug": "bloomenergy",
+    "wd": "wd1",
+    "site": "bloomenergycareers"
+  },
+  {
+    "name": "Plug Power",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "workday",
+    "slug": "plugpower",
+    "wd": "wd5",
+    "site": "Plug_Power_Inc"
+  },
+  {
+    "name": "X-energy",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "workday",
+    "slug": "xenergy",
+    "wd": "wd5",
+    "site": "X-energyUS"
+  },
+  {
+    "name": "Kairos Power",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "greenhouse",
+    "slug": "kairospower"
+  },
+  {
+    "name": "Oklo",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "greenhouse",
+    "slug": "oklo"
+  },
+  {
+    "name": "Commonwealth Fusion Systems",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "lever",
+    "slug": "cfsenergy"
+  }
+]

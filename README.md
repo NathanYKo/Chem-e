@@ -30,10 +30,10 @@ The GitHub Action in `.github/workflows/scrape.yml` runs it daily and commits th
 
 ## How it works
 
-1. **Connectors** (`connectors.go`) cover Workday, Greenhouse, Lever, Ashby, SmartRecruiters and Oracle Recruiting Cloud. Workday, Oracle and SmartRecruiters only return keyword hits, so each board is searched for `intern`, `co-op`, `chemical engineer`, `process engineer`, `new grad`, `graduate`, `entry level` and `early career`.
+1. **Connectors** (`connectors.go`) cover Workday, Greenhouse, Lever, Ashby, SmartRecruiters and Oracle Recruiting Cloud. Workday, Oracle and SmartRecruiters only return keyword hits, so each board is searched for `intern`, `co-op`, `chemical engineer`, `process engineer`, `new grad`, `graduate`, `entry level`, `early career`, `controls engineer`, `supply chain engineer` and `R&D engineer`.
 2. **Classifier** (`filter.go`) works from the job title:
    - **Level:** Internship, Co-op, or New Grad / Early Career (Engineer I, Associate Engineer, rotational / development programs, and similar). Senior, II/III, lead, manager and postdoc titles are dropped.
-   - **Fit:** 🧪 **ChemE** means the title names a ChemE discipline (process, chemical, polymer, refining, bioprocess, formulation, MS&T, catalysis, battery materials…). ⚙️ **Engineering** means a general engineering early-talent role at the same employers, which usually lists ChemE as an eligible major. Clearly different disciplines (software, electrical, mechanical, finance…) are dropped.
+   - **Fit:** 🧪 **ChemE** means the title names a ChemE discipline (process, chemical, polymer, refining, bioprocess, formulation, MS&T, catalysis, battery materials, plus controls, supply chain and R&D engineering). ⚙️ **Engineering** means a general engineering early-talent role at the same employers, which usually lists ChemE as an eligible major. Clearly different disciplines (software, electrical, mechanical, finance, supply chain analyst…) are dropped.
 3. **Location** (`location.go`) keeps US roles. If a location can't be identified, the role is kept rather than risk losing a real US job.
 4. **Store:** jobs are deduped across career sites, `first_seen` is carried over between runs, and a board that fails keeps last run's roles.
 

@@ -24,6 +24,9 @@ var searchTerms = []string{
 	"graduate",
 	"entry level",
 	"early career",
+	"controls engineer",
+	"supply chain engineer",
+	"R&D engineer",
 }
 
 // Fetcher pulls every candidate posting from one board. maxPages bounds how

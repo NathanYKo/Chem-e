@@ -15,7 +15,7 @@ var (
 	reNewGrad = regexp.MustCompile(`(?i)\b(new[ -]?grads?|new college grad|recent (college )?grad(uate)?s?|graduates?\b|` +
 		`entry[ -]level|early[ -]career|early[ -]talent|university (grad|graduate|hire|recruit)|campus( hire)?|college (hire|grad)|` +
 		`rotational|rotation program|development program|leadership (development )?program|` +
-		`engineer[- ]in[- ]training|\bEIT\b|junior|jr\.?|associate (process |chemical |manufacturing |project )?engineer|` +
+		`engineer[- ]in[- ]training|\bEIT\b|junior|jr\.?|associate ([a-z&]+ ){0,2}engineer|` +
 		`(engineer|scientist|technologist|specialist) (i|1)\b|level (i|1)\b|` +
 		`(class|cohort) of 20\d\d|20(26|27) (grad|graduate|start))`)
 	// Roles that are clearly beyond early career.
@@ -30,7 +30,10 @@ var (
 		`materials (engineer|engineering|science)|electrochem|battery (cell|process|materials)|cathode|anode|electrolyte|lithium|hydrogen|ammonia|` +
 		`carbon capture|decarboni[sz]ation|process safety|production engineer|plant engineer|operations engineer|unit engineer|` +
 		`environmental engineer|water treatment|wastewater|corrosion|thin film|wet etch|cvd|deposition|etch (process|engineer)|` +
-		`pharmaceutical (engineer|manufacturing|sciences?)|drug (product|substance)|api manufacturing|r&d engineer|research (&|and) development engineer)`)
+		`pharmaceutical (engineer|manufacturing|sciences?)|drug (product|substance)|api manufacturing|` +
+		// Roles added on request: controls, supply chain and R&D engineering.
+		`controls? (engineer|engineering)|automation (engineer|engineering)|supply chain (engineer|engineering)|` +
+		`(r ?& ?d|research (&|and) development) (engineer|engineering))`)
 
 	// General engineering early-talent roles a ChemE can apply to (they often
 	// list "Chemical, Mechanical or Electrical Engineering" as eligible majors).

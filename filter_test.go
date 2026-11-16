@@ -22,6 +22,13 @@ func TestClassify(t *testing.T) {
 		{"Mechanical/Chemical Engineering Intern", LevelIntern, FitChemE},
 		{"Production Engineer - University Graduate", LevelNewGrad, FitChemE},
 		{"Formulation Scientist Intern", LevelIntern, FitChemE},
+		{"Controls Engineering Intern", LevelIntern, FitChemE},
+		{"Process Controls Engineer I", LevelNewGrad, FitChemE},
+		{"Supply Chain Engineer - New Grad", LevelNewGrad, FitChemE},
+		{"Supply Chain Engineering Co-op", LevelCoop, FitChemE},
+		{"R&D Engineer Intern", LevelIntern, FitChemE},
+		{"Research and Development Engineering Intern", LevelIntern, FitChemE},
+		{"Associate R&D Engineer", LevelNewGrad, FitChemE},
 		// General engineering early talent at chem employers
 		{"Engineering Intern", LevelIntern, FitEng},
 		{"Manufacturing Engineering Co-op", LevelCoop, FitEng},
@@ -34,6 +41,8 @@ func TestClassify(t *testing.T) {
 		{"Electrical Engineer I", "", ""},
 		{"Finance Intern", "", ""},
 		{"Supply Chain Co-op", "", ""},
+		{"Supply Chain Analyst Intern", "", ""},
+		{"Senior Controls Engineer", "", ""},
 		{"Data Science Intern", "", ""},
 		// Rejected: seniority
 		{"Senior Process Engineer", "", ""},

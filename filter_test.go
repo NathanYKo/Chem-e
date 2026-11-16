@@ -125,13 +125,13 @@ func TestFilterRecent(t *testing.T) {
 	if got := keep(0); got != "abcde" {
 		t.Errorf("no limit: got %q", got)
 	}
-	if l := ageLabel(jobs[0], now); l != "1d" {
+	if l := datePostedLabel(jobs[0]); l != "2026-11-15" {
 		t.Errorf("label %q", l)
 	}
-	if l := ageLabel(jobs[3], now); l != "30d+" {
+	if l := datePostedLabel(jobs[3]); l != "—" {
 		t.Errorf("label %q", l)
 	}
-	if l := ageLabel(jobs[4], now); l != "~today" {
+	if l := datePostedLabel(jobs[4]); l != "2026-11-16" {
 		t.Errorf("label %q", l)
 	}
 }

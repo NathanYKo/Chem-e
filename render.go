@@ -7,7 +7,6 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
-	"time"
 )
 
 func writeOutputs(outDir string, jobs []Job, boards, failed int, today string) error {
@@ -112,10 +111,6 @@ func truncate(s string, n int) string {
 }
 
 func renderMarkdown(jobs []Job, boards, failed int, today string) string {
-	now, err := time.Parse("2006-01-02", today)
-	if err != nil {
-		now = time.Now().UTC()
-	}
 	var b strings.Builder
 	fmt.Fprintf(&b, "# ChemE Internships, Co-ops & New Grad Roles\n\n")
 	fmt.Fprintf(&b, "_Updated %s · %d roles · %d company boards scraped", today, len(jobs), boards)
@@ -126,11 +121,18 @@ func renderMarkdown(jobs []Job, boards, failed int, today string) string {
 	b.WriteString("**Fit:** 🧪 = title names a ChemE discipline (process, polymer, refining, bioprocess…) · " +
 		"⚙️ = general engineering early-talent role at a chem-heavy employer (usually open to ChemE majors)\n\n")
 
-	sections := []struct{ title, level string }{
-		{"🎓 Internships", LevelIntern},
-		{"🔁 Co-ops", LevelCoop},
-		{"🚀 New Grad / Early Career", LevelNewGrad},
+	sections := []struct{ title, level, anchor string }{
+		{"🎓 Internships", LevelIntern, "internships"},
+		{"🔁 Co-ops", LevelCoop, "co-ops"},
+		{"🚀 New Grad / Early Career", LevelNewGrad, "new-grad"},
 	}
+	counts := map[string]int{}
+	for _, j := range jobs {
+		counts[j.Level]++
+	}
+	fmt.Fprintf(&b, "**Jump to:** [Internships (%d)](#internships) · [Co-ops (%d)](#co-ops) · [New Grad / Early Career (%d)](#new-grad)\n\n",
+		counts[LevelIntern], counts[LevelCoop], counts[LevelNewGrad])
+
 	for _, s := range sections {
 		var rows []Job
 		for _, j := range jobs {
@@ -138,18 +140,18 @@ func renderMarkdown(jobs []Job, boards, failed int, today string) string {
 				rows = append(rows, j)
 			}
 		}
-		fmt.Fprintf(&b, "## %s (%d)\n\n", s.title, len(rows))
+		fmt.Fprintf(&b, "<a id=\"%s\"></a>\n## %s (%d)\n\n", s.anchor, s.title, len(rows))
 		if len(rows) == 0 {
 			b.WriteString("_None right now._\n\n")
 			continue
 		}
-		b.WriteString("| Company | Role | Fit | Location | Age | Sector |\n| --- | --- | :-: | --- | --- | --- |\n")
+		b.WriteString("| Company | Role | Fit | Location | Date posted | Sector |\n| --- | --- | :-: | --- | :-: | --- |\n")
 		for _, j := range rows {
 			fit := "⚙️"
 			if j.Fit == FitChemE {
 				fit = "🧪"
 			}
-			posted := ageLabel(j, now)
+			posted := datePostedLabel(j)
 			loc := j.Location
 			if loc == "" {
 				loc = "—"
@@ -163,22 +165,14 @@ func renderMarkdown(jobs []Job, boards, failed int, today string) string {
 	return b.String()
 }
 
-// ageLabel renders "today", "3d", or "30d+" the way the big job lists do.
-// Dates we only know from first-seen get a "~" since the role may be older.
-func ageLabel(j Job, now time.Time) string {
+// datePostedLabel is the calendar date shown in the board: ATS posted date,
+// else first-seen. Vague Workday "30+ days" and missing dates render as "—".
+func datePostedLabel(j Job) string {
 	if j.Posted == "" && j.Posted30 {
-		return "30d+"
-	}
-	a := ageDays(j, now)
-	if a < 0 {
 		return "—"
 	}
-	label := fmt.Sprintf("%dd", a)
-	if a == 0 {
-		label = "today"
+	if d := postedDate(j); d != "" {
+		return d
 	}
-	if j.Posted == "" {
-		label = "~" + label
-	}
-	return label
+	return "—"
 }

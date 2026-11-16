@@ -61,3 +61,49 @@ func TestWriteOutputsSkipsMissingReadme(t *testing.T) {
 		t.Fatal(err)
 	}
 }
+
+func TestRenderMarkdownJumpLinksAndDatePosted(t *testing.T) {
+	jobs := []Job{
+		{Company: "Dow", Title: "Intern", URL: "https://ex/i", Level: LevelIntern, Fit: FitChemE, Location: "TX", Category: "Chemicals", Posted: "2026-11-15"},
+		{Company: "Merck", Title: "Co-op", URL: "https://ex/c", Level: LevelCoop, Fit: FitEng, Location: "PA", Category: "Pharma", FirstSeen: "2026-11-10"},
+		{Company: "Amgen", Title: "New Grad", URL: "https://ex/n", Level: LevelNewGrad, Fit: FitChemE, Location: "CA", Category: "Pharma", Posted30: true, FirstSeen: "2026-11-16"},
+	}
+	md := renderMarkdown(jobs, 3, 0, "2026-11-16")
+	for _, want := range []string{
+		"**Jump to:** [Internships (1)](#internships) · [Co-ops (1)](#co-ops) · [New Grad / Early Career (1)](#new-grad)",
+		`<a id="internships"></a>`,
+		`<a id="co-ops"></a>`,
+		`<a id="new-grad"></a>`,
+		"| Company | Role | Fit | Location | Date posted | Sector |",
+		"| --- | --- | :-: | --- | :-: | --- |",
+		"| Dow | [Intern](https://ex/i) | 🧪 | TX | 2026-11-15 | Chemicals |",
+		"| Merck | [Co-op](https://ex/c) | ⚙️ | PA | 2026-11-10 | Pharma |",
+		"| Amgen | [New Grad](https://ex/n) | 🧪 | CA | — | Pharma |",
+	} {
+		if !strings.Contains(md, want) {
+			t.Errorf("missing %q\n%s", want, md)
+		}
+	}
+	for _, bad := range []string{"| Age |", "today", "1d", "~"} {
+		if strings.Contains(md, bad) {
+			t.Errorf("unexpected %q in:\n%s", bad, md)
+		}
+	}
+}
+
+func TestDatePostedLabel(t *testing.T) {
+	cases := []struct {
+		j    Job
+		want string
+	}{
+		{Job{Posted: "2026-11-15"}, "2026-11-15"},
+		{Job{FirstSeen: "2026-11-10"}, "2026-11-10"},
+		{Job{Posted30: true, FirstSeen: "2026-11-16"}, "—"},
+		{Job{}, "—"},
+	}
+	for _, c := range cases {
+		if got := datePostedLabel(c.j); got != c.want {
+			t.Errorf("%+v: got %q want %q", c.j, got, c.want)
+		}
+	}
+}

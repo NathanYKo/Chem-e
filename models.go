@@ -9,6 +9,16 @@ package main
 //	ashby:           Slug
 //	smartrecruiters: Slug (case-sensitive company id)
 //	oracle:          Host (xxxx.fa.us2.oraclecloud.com), Site (CX_1, ...)
+//	workable:        Slug (account, as in apply.workable.com/{slug})
+//	breezy:          Slug (subdomain, as in {slug}.breezy.hr)
+//	rippling:        Slug (board, as in ats.rippling.com/{slug}/jobs)
+//	bamboohr:        Slug (subdomain, as in {slug}.bamboohr.com/careers)
+//	adp:             Slug (cid query on workforcenow.adp.com)
+//	eightfold:       Host (jobs.example.com), Slug (domain query)
+//	wordpress:       Host (example.com), Slug (REST base, e.g. jobpost)
+//	successfactors:  Host (career site, e.g. jobs.cargill.com)
+//	cornerstone:     Slug (portal, as in {slug}.csod.com), Site (career-site id)
+//	tesla:           none — single Tesla careers catalogue
 type Company struct {
 	Name     string `json:"name"`
 	Category string `json:"category"`

@@ -105,7 +105,8 @@ func TestIsLikelyUS(t *testing.T) {
 		"Baton Rouge, LA", "3 Locations", "Houston", "United States", "Albuquerque, New Mexico",
 		"Remote, US", "Rahway, New Jersey, United States of America", "Toronto, Canada; Houston, TX, United States"}
 	foreign := []string{"Ludwigshafen, Germany", "Sarnia, ON", "Mississauga, ON, CA", "Bengaluru, Karnataka, India",
-		"Shanghai, China", "London, United Kingdom", "Mexico City, Mexico", "Singapore", "Antwerp"}
+		"Shanghai, China", "London, United Kingdom", "Mexico City, Mexico", "Singapore", "Antwerp",
+		"Grünheide (mark), Brandenburg", "Tilburg, Noord-brabant", "Langley, British Columbia"}
 	for _, l := range us {
 		if !IsLikelyUS(l) {
 			t.Errorf("%q should be US", l)

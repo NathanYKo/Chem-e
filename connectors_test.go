@@ -10,6 +10,7 @@ import (
 	"net/url"
 	"os"
 	"path/filepath"
+	"strconv"
 	"strings"
 	"testing"
 	"time"
@@ -130,6 +131,61 @@ func TestGreenhouseLeverAshby(t *testing.T) {
 	}
 }
 
+func TestTeslaJobURLAndParse(t *testing.T) {
+	got := teslaJobURL(" Internship, Chemical Engineer, Cell Engineering (Winter/Spring 2027)", "280192")
+	want := "https://www.tesla.com/careers/search/job/-internship-chemical-engineer-cell-engineering-winter-spring-2027-280192"
+	if got != want {
+		t.Errorf("slug with leading space:\n got %s\nwant %s", got, want)
+	}
+	got = teslaJobURL("Logistics Industrial Engineer Intern, Cell Engineering (Winter/Spring 2027)", "287545")
+	want = "https://www.tesla.com/careers/search/job/logistics-industrial-engineer-intern-cell-engineering-winter-spring-2027-287545"
+	if got != want {
+		t.Errorf("slug:\n got %s\nwant %s", got, want)
+	}
+
+	c := testClient(t, func(w http.ResponseWriter, r *http.Request) {
+		if r.Header.Get("X-Orig-Host") != "www.tesla.com" || r.URL.Path != "/cua-api/apps/careers/state" {
+			t.Errorf("request %s %s", r.Header.Get("X-Orig-Host"), r.URL.Path)
+		}
+		io.WriteString(w, `{"lookup":{"locations":{"9":"Fremont, California"}},"listings":[{"id":"280192","t":" Internship, Chemical Engineer, Cell Engineering (Winter/Spring 2027)","l":"9"},{"id":"","t":"skip"}]}`)
+	})
+	jobs, err := fetchTesla(context.Background(), c, Company{Name: "Tesla", Category: "Batteries, Climate & Nuclear", ATS: "tesla"}, 1)
+	if err != nil || len(jobs) != 1 || jobs[0].ID != "tesla:280192" || jobs[0].Location != "Fremont, California" || jobs[0].Title != "Internship, Chemical Engineer, Cell Engineering (Winter/Spring 2027)" {
+		t.Fatalf("parse: %+v %v", jobs, err)
+	}
+	if jobs[0].URL != "https://www.tesla.com/careers/search/job/-internship-chemical-engineer-cell-engineering-winter-spring-2027-280192" {
+		t.Errorf("url %s", jobs[0].URL)
+	}
+}
+
+func TestWorkableAndBreezy(t *testing.T) {
+	c := testClient(t, func(w http.ResponseWriter, r *http.Request) {
+		switch r.Header.Get("X-Orig-Host") {
+		case "apply.workable.com":
+			if r.URL.Path != "/api/v1/widget/accounts/amprius" {
+				t.Errorf("workable path %s", r.URL.Path)
+			}
+			io.WriteString(w, `{"jobs":[{"title":"Electrode Process Intern","shortcode":"ABC","url":"https://apply.workable.com/j/ABC","published_on":"2026-11-02","city":"Fremont","state":"California","country":"United States"},{"title":"","shortcode":"skip"}]}`)
+		case "forge-nano.breezy.hr":
+			if r.URL.Path != "/json" {
+				t.Errorf("breezy path %s", r.URL.Path)
+			}
+			io.WriteString(w, `[{"id":"p1","name":"Process Engineer I","url":"https://forge-nano.breezy.hr/p/p1","published_date":"2026-11-16T17:44:33.094Z","location":{"city":"Thornton","state":{"name":"Colorado"},"country":{"name":"United States"}}}]`)
+		default:
+			http.NotFound(w, r)
+		}
+	})
+	ctx := context.Background()
+	wk, err := fetchWorkable(ctx, c, Company{Name: "Amprius", Slug: "amprius"}, 1)
+	if err != nil || len(wk) != 1 || wk[0].Posted != "2026-11-02" || wk[0].Location != "Fremont, California, United States" || wk[0].URL != "https://apply.workable.com/j/ABC" {
+		t.Errorf("workable: %+v %v", wk, err)
+	}
+	bz, err := fetchBreezy(ctx, c, Company{Name: "Forge Nano", Slug: "forge-nano"}, 1)
+	if err != nil || len(bz) != 1 || bz[0].Posted != "2026-11-16" || bz[0].Location != "Thornton, Colorado, United States" || bz[0].ID != "breezy:forge-nano:p1" {
+		t.Errorf("breezy: %+v %v", bz, err)
+	}
+}
+
 func TestOracleAndSmartRecruiters(t *testing.T) {
 	c := testClient(t, func(w http.ResponseWriter, r *http.Request) {
 		q := r.URL.Query()
@@ -153,6 +209,197 @@ func TestOracleAndSmartRecruiters(t *testing.T) {
 	sr, err := fetchSmartRecruiters(ctx, c, Company{Name: "AbbVie", Slug: "AbbVie"}, 3)
 	if err != nil || len(sr) != 1 || sr[0].Location != "North Chicago, IL, US" {
 		t.Errorf("smartrecruiters: %+v %v", sr, err)
+	}
+}
+
+func TestPublicBoardFeeds(t *testing.T) {
+	c := testClient(t, func(w http.ResponseWriter, r *http.Request) {
+		q := r.URL.Query()
+		switch r.Header.Get("X-Orig-Host") {
+		case "ats.rippling.com":
+			if r.URL.Path != "/api/v2/board/lilac-solutions/jobs" {
+				t.Errorf("rippling path %s", r.URL.Path)
+			}
+			page := q.Get("page")
+			if page == "0" {
+				io.WriteString(w, `{"totalPages":2,"items":[{"id":"a","name":"Associate Process Engineer","url":"https://ats.rippling.com/lilac-solutions/jobs/a","locations":[{"city":"Berkeley","state":"CA","country":"United States"},{"city":"","state":"","country":"","name":"Remote"}]}]}`)
+				return
+			}
+			io.WriteString(w, `{"totalPages":2,"items":[{"id":"a","name":"Associate Process Engineer","url":"https://ats.rippling.com/lilac-solutions/jobs/a","locations":[{"city":"Berkeley","state":"CA","country":"United States"}]}]}`)
+		case "ensurge.bamboohr.com":
+			if r.URL.Path != "/careers/list" {
+				t.Errorf("bamboo path %s", r.URL.Path)
+			}
+			io.WriteString(w, `{"meta":{"totalCount":1},"result":[{"id":"85","jobOpeningName":"Thin Film Engineer","location":{"city":"San Jose","state":"California"},"atsLocation":{"country":"United States"}}]}`)
+		case "workforcenow.adp.com":
+			if q.Get("cid") != "cid-1" || !strings.Contains(r.URL.RawQuery, "top=") {
+				t.Errorf("adp query %s", r.URL.RawQuery)
+			}
+			io.WriteString(w, `{"meta":{"totalNumber":1},"jobRequisitions":[{"itemID":"99_1","requisitionTitle":"Process Engineer","postDate":"2026-11-15T04:56:00","requisitionLocations":[{"nameCode":{"shortName":"US - Milpitas, CA"},"address":{"cityName":"Milpitas"}}]}]}`)
+		case "jobs.infineon.com":
+			if q.Get("domain") != "infineon.com" || r.URL.Path != "/api/pcsx/search" {
+				t.Errorf("eightfold %s %s", r.URL.Path, r.URL.RawQuery)
+			}
+			start, _ := strconv.Atoi(q.Get("start"))
+			const total = 11
+			n := 10
+			if start+n > total {
+				n = total - start
+			}
+			var positions []string
+			for i := 0; i < n; i++ {
+				id := start + i + 1
+				positions = append(positions, fmt.Sprintf(`{"id":%d,"name":"Intern %d","locations":["San Jose","CA (United States)"],"postedTs":1700000000,"positionUrl":"/careers/job/%d"}`, id, id, id))
+			}
+			fmt.Fprintf(w, `{"data":{"count":11,"positions":[%s]}}`, strings.Join(positions, ","))
+		case "aem.com.sg":
+			if !strings.Contains(r.URL.Path, "/wp-json/wp/v2/awsm_job_openings") {
+				t.Errorf("wp path %s", r.URL.Path)
+			}
+			io.WriteString(w, `[{"id":7,"date":"2026-11-13T09:08:54","status":"publish","link":"https://aem.com.sg/job-openings/rd","title":{"rendered":"R&amp;D Intern"},"class_list":["job-location-singapore"]}]`)
+		case "full.example":
+			if r.URL.Query().Get("page") == "2" {
+				w.WriteHeader(http.StatusBadRequest)
+				io.WriteString(w, `{"code":"rest_post_invalid_page_number"}`)
+				return
+			}
+			var posts []string
+			for i := 1; i <= 100; i++ {
+				posts = append(posts, fmt.Sprintf(`{"id":%d,"date":"2026-11-01","status":"publish","link":"https://full.example/j/%d","title":{"rendered":"Engineer %d"},"class_list":["job-location-austin"]}`, i, i, i))
+			}
+			fmt.Fprintf(w, `[%s]`, strings.Join(posts, ","))
+		case "multibeamcorp.com":
+			io.WriteString(w, `[{"id":3,"date":"2026-11-12","status":"publish","link":"https://multibeamcorp.com/jobs/servo","title":{"rendered":"Servo Engineer"},"class_list":["jobpost_location-sunnyvale"],"_embedded":{"wp:term":[[{"taxonomy":"jobpost_location","name":"Sunnyvale CA"}]]}}]`)
+		default:
+			http.NotFound(w, r)
+		}
+	})
+	ctx := context.Background()
+
+	rp, err := fetchRippling(ctx, c, Company{Name: "Lilac Solutions", Slug: "lilac-solutions"}, 1)
+	if err != nil || len(rp) != 1 || rp[0].Title != "Associate Process Engineer" || rp[0].Location != "Berkeley, CA, United States; Remote" || rp[0].URL != "https://ats.rippling.com/lilac-solutions/jobs/a" || rp[0].ID != "rippling:lilac-solutions:a" {
+		t.Errorf("rippling: %+v %v", rp, err)
+	}
+	bb, err := fetchBambooHR(ctx, c, Company{Name: "Ensurge", Slug: "ensurge"}, 1)
+	if err != nil || len(bb) != 1 || bb[0].Title != "Thin Film Engineer" || bb[0].Location != "San Jose, California, United States" || bb[0].URL != "https://ensurge.bamboohr.com/careers/85" {
+		t.Errorf("bamboohr: %+v %v", bb, err)
+	}
+	ad, err := fetchADP(ctx, c, Company{Name: "Diodes", Slug: "cid-1"}, 1)
+	if err != nil || len(ad) != 1 || ad[0].Title != "Process Engineer" || ad[0].Posted != "2026-11-15" || ad[0].Location != "US - Milpitas, CA" || !strings.Contains(ad[0].URL, "jobId=99_1") {
+		t.Errorf("adp: %+v %v", ad, err)
+	}
+	ef, err := fetchEightfold(ctx, c, Company{Name: "Infineon", Host: "jobs.infineon.com", Slug: "infineon.com"}, 1)
+	if err != nil || len(ef) != 11 {
+		t.Errorf("eightfold: n=%d %v", len(ef), err)
+	}
+	for _, j := range ef {
+		if j.URL == "https://jobs.infineon.com/careers/job/1" && (j.Posted != "2023-11-14" || j.Location != "San Jose, CA (United States)") {
+			t.Errorf("eightfold job %+v", j)
+		}
+	}
+	wp, err := fetchWordPress(ctx, c, Company{Name: "AEM", Host: "aem.com.sg", Slug: "awsm_job_openings"}, 1)
+	if err != nil || len(wp) != 1 || wp[0].Title != "R&D Intern" || wp[0].Posted != "2026-11-13" || wp[0].Location != "singapore" || wp[0].URL != "https://aem.com.sg/job-openings/rd" {
+		t.Errorf("wordpress: %+v %v", wp, err)
+	}
+	full, err := fetchWordPress(ctx, c, Company{Name: "Full", Host: "full.example", Slug: "jobpost"}, 1)
+	if err != nil || len(full) != 100 {
+		t.Errorf("wordpress page end: n=%d %v", len(full), err)
+	}
+	mb, err := fetchWordPress(ctx, c, Company{Name: "Multibeam", Host: "multibeamcorp.com", Slug: "jobpost"}, 1)
+	if err != nil || len(mb) != 1 || mb[0].Location != "Sunnyvale CA" {
+		t.Errorf("wordpress term: %+v %v", mb, err)
+	}
+}
+
+func TestSuccessFactorsRSS(t *testing.T) {
+	c := testClient(t, func(w http.ResponseWriter, r *http.Request) {
+		if r.Header.Get("X-Orig-Host") != "careers.skyworksinc.com" || r.URL.Path != "/services/rss/job/" || r.URL.Query().Get("rows") == "" {
+			t.Errorf("request %s %s?%s", r.Header.Get("X-Orig-Host"), r.URL.Path, r.URL.RawQuery)
+		}
+		if !strings.Contains(r.Header.Get("Accept"), "xml") {
+			http.Error(w, "not acceptable", http.StatusNotAcceptable)
+			return
+		}
+		io.WriteString(w, `<?xml version="1.0" encoding="UTF-8" ?><rss version='2.0'><channel>
+<item><title><![CDATA[RF Engineer Summer/Fall Co-Op (June-Dec '27) (San Jose, CA, US, 95134)]]></title><pubDate>Sat, 21 Nov 2026 8:00:00 GMT</pubDate><link>https://careers.skyworksinc.com/job/San-Jose-RF/1433516700/?feedId=null&amp;utm_source=J2WRSS</link></item>
+<item><title><![CDATA[Intern, Process Engineering (HK)]]></title><link>https://careers.skyworksinc.com/job/HK/1443131901/</link></item>
+<item><title><![CDATA[Process Engineer (Curitiba, PR, BR, 80420-000)]]></title><pubDate>Wed, 04 Nov 2026 8:00:00 GMT</pubDate><link>https://careers.skyworksinc.com/job/Curitiba/1443131900/?feedId=</link></item>
+<item><title><![CDATA[Staff Engineer - Req 1608 (CA, US, 95110)]]></title><pubDate>Wed, 18 Nov 2026 8:00:00 GMT</pubDate><link>https://careers.skyworksinc.com/job/Staff/1442110800/</link></item>
+<item><title><![CDATA[Supervisor de Ventas (Coban, Alta Verapaz, GT Guatemala, 16001)]]></title><link>https://careers.skyworksinc.com/job/Coban/1370343657/</link></item>
+</channel></rss>`)
+	})
+	jobs, err := fetchSuccessFactors(context.Background(), c, Company{Name: "Skyworks", Host: "careers.skyworksinc.com"}, 1)
+	if err != nil || len(jobs) != 5 {
+		t.Fatalf("got %d jobs, err %v", len(jobs), err)
+	}
+	byID := map[string]Job{}
+	for _, j := range jobs {
+		byID[j.ID] = j
+	}
+	sj := byID["successfactors:careers.skyworksinc.com:1433516700"]
+	if sj.Title != "RF Engineer Summer/Fall Co-Op (June-Dec '27)" || sj.Location != "San Jose, CA, United States" ||
+		sj.Posted != "2026-11-21" || sj.URL != "https://careers.skyworksinc.com/job/San-Jose-RF/1433516700/" {
+		t.Errorf("us job %+v", sj)
+	}
+	br := byID["successfactors:careers.skyworksinc.com:1443131900"]
+	if br.Location != "Curitiba, Brazil" || IsLikelyUS(br.Location) {
+		t.Errorf("brazil job location %q", br.Location)
+	}
+	if qs := byID["successfactors:careers.skyworksinc.com:1442110800"]; qs.Location != "CA, United States" || qs.Title != "Staff Engineer - Req 1608" {
+		t.Errorf("state-only job %+v", qs)
+	}
+	if gt := byID["successfactors:careers.skyworksinc.com:1370343657"]; gt.Location != "Coban, Guatemala" || gt.Posted != "" {
+		t.Errorf("named-country job %+v", gt)
+	}
+	if hk := byID["successfactors:careers.skyworksinc.com:1443131901"]; hk.Location != "Hong Kong" || hk.Title != "Intern, Process Engineering" || IsLikelyUS(hk.Location) {
+		t.Errorf("country-only job %+v", hk)
+	}
+}
+
+func TestCornerstone(t *testing.T) {
+	c := testClient(t, func(w http.ResponseWriter, r *http.Request) {
+		switch r.Header.Get("X-Orig-Host") {
+		case "linde.csod.com":
+			if r.URL.Path != "/ux/ats/careersite/23/home" || r.URL.Query().Get("c") != "linde" {
+				t.Errorf("page %s?%s", r.URL.Path, r.URL.RawQuery)
+			}
+			io.WriteString(w, `<script>csod.context={"corp":"linde","endpoints":{"cloud":"https://eu-fra.api.csod.com/","api":"/"},"token":"tok123"};</script>`)
+		case "eu-fra.api.csod.com":
+			if r.URL.Path != "/rec-job-search/external/jobs" || r.Header.Get("Authorization") != "Bearer tok123" {
+				t.Errorf("api %s auth=%q", r.URL.Path, r.Header.Get("Authorization"))
+			}
+			var body struct {
+				CareerSiteID int `json:"careerSiteId"`
+				PageNumber   int `json:"pageNumber"`
+			}
+			_ = json.NewDecoder(r.Body).Decode(&body)
+			if body.CareerSiteID != 23 {
+				t.Errorf("career site %d", body.CareerSiteID)
+			}
+			if body.PageNumber == 1 {
+				io.WriteString(w, `{"data":{"totalCount":2,"requisitions":[{"requisitionId":34833,"postingEffectiveDate":"10/2/2026","displayJobTitle":"Engineering Co-op","locations":[{"city":"Alpha","state":"NJ","country":"US"},{"city":"Tonawanda","state":"NY","country":"US"}]}]}}`)
+				return
+			}
+			io.WriteString(w, `{"data":{"totalCount":2,"requisitions":[{"requisitionId":35000,"postingEffectiveDate":"-","displayJobTitle":"Process Engineer","locations":[{"city":"Leuna","state":"","country":"DE"}]}]}}`)
+		default:
+			http.NotFound(w, r)
+		}
+	})
+	jobs, err := fetchCornerstone(context.Background(), c, Company{Name: "Linde", Slug: "linde", Site: "23"}, 5)
+	if err != nil || len(jobs) != 2 {
+		t.Fatalf("got %d jobs, err %v", len(jobs), err)
+	}
+	byID := map[string]Job{}
+	for _, j := range jobs {
+		byID[j.ID] = j
+	}
+	co := byID["cornerstone:linde:34833"]
+	if co.Title != "Engineering Co-op" || co.Posted != "2026-10-02" || co.Location != "Alpha, NJ, United States; Tonawanda, NY, United States" ||
+		co.URL != "https://linde.csod.com/ux/ats/careersite/23/home/requisition/34833?c=linde" {
+		t.Errorf("co-op %+v", co)
+	}
+	if de := byID["cornerstone:linde:35000"]; de.Location != "Leuna, Germany" || de.Posted != "" {
+		t.Errorf("foreign %+v", de)
 	}
 }
 

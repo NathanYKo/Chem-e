@@ -266,6 +266,98 @@
     "site": "CX_1001"
   },
   {
+    "name": "Atomic Machines",
+    "category": "Semiconductors & Electronics",
+    "ats": "greenhouse",
+    "slug": "atomicmachines"
+  },
+  {
+    "name": "Lumentum",
+    "category": "Semiconductors & Electronics",
+    "ats": "workday",
+    "slug": "lumentum",
+    "wd": "wd5",
+    "site": "LITE"
+  },
+  {
+    "name": "Marvell Technology",
+    "category": "Semiconductors & Electronics",
+    "ats": "workday",
+    "slug": "marvell",
+    "wd": "wd1",
+    "site": "MarvellCareers"
+  },
+  {
+    "name": "Onto Innovation",
+    "category": "Semiconductors & Electronics",
+    "ats": "workday",
+    "slug": "onto",
+    "wd": "wd1",
+    "site": "ONTO_Careers"
+  },
+  {
+    "name": "ASML",
+    "category": "Semiconductors & Electronics",
+    "ats": "workday",
+    "slug": "asml",
+    "wd": "wd3",
+    "site": "ASMLEXT1"
+  },
+  {
+    "name": "MKS Instruments",
+    "category": "Semiconductors & Electronics",
+    "ats": "workday",
+    "slug": "mksinst",
+    "wd": "wd1",
+    "site": "MKSCareersAmericas"
+  },
+  {
+    "name": "PsiQuantum",
+    "category": "Semiconductors & Electronics",
+    "ats": "greenhouse",
+    "slug": "psiquantum"
+  },
+  {
+    "name": "Rigetti Computing",
+    "category": "Semiconductors & Electronics",
+    "ats": "lever",
+    "slug": "rigetti"
+  },
+  {
+    "name": "Mattson Technology",
+    "category": "Semiconductors & Electronics",
+    "ats": "oracle",
+    "host": "eidg.fa.us6.oraclecloud.com",
+    "site": "CX_2"
+  },
+  {
+    "name": "Diodes Incorporated",
+    "category": "Semiconductors & Electronics",
+    "ats": "adp",
+    "slug": "d72519df-1ce1-4f1d-b01b-50a082de06d5"
+  },
+  {
+    "name": "Infineon Technologies",
+    "category": "Semiconductors & Electronics",
+    "ats": "eightfold",
+    "host": "jobs.infineon.com",
+    "slug": "infineon.com"
+  },
+  {
+    "name": "AEM",
+    "category": "Semiconductors & Electronics",
+    "ats": "wordpress",
+    "host": "aem.com.sg",
+    "slug": "awsm_job_openings"
+  },
+  {
+    "name": "Multibeam",
+    "category": "Semiconductors & Electronics",
+    "ats": "wordpress",
+    "host": "multibeamcorp.com",
+    "slug": "jobpost"
+  },
+  {
     "name": "Redwood Materials",
     "category": "Batteries, Climate & Nuclear",
     "ats": "greenhouse",
@@ -326,6 +418,80 @@
     "slug": "cfsenergy"
   },
   {
+    "name": "Lyten",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "workday",
+    "slug": "lyten",
+    "wd": "wd503",
+    "site": "Lyten_External_Career_Site"
+  },
+  {
+    "name": "Form Energy",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "ashby",
+    "slug": "formenergy"
+  },
+  {
+    "name": "Solid Power",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "greenhouse",
+    "slug": "solidpower"
+  },
+  {
+    "name": "Factorial Energy",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "greenhouse",
+    "slug": "factorialenergy"
+  },
+  {
+    "name": "Group14",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "greenhouse",
+    "slug": "group14"
+  },
+  {
+    "name": "Peak Energy",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "greenhouse",
+    "slug": "peakenergy"
+  },
+  {
+    "name": "SES AI",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "greenhouse",
+    "slug": "sesai"
+  },
+  {
+    "name": "Noon Energy",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "greenhouse",
+    "slug": "noonenergy"
+  },
+  {
+    "name": "Amprius",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "workable",
+    "slug": "amprius"
+  },
+  {
+    "name": "Mitra Chem",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "workable",
+    "slug": "mitra-chem"
+  },
+  {
+    "name": "Forge Nano",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "breezy",
+    "slug": "forge-nano"
+  },
+  {
+    "name": "Tesla",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "tesla",
+    "disabled": true
+  },
+  {
     "name": "Radiant",
     "category": "Batteries, Climate & Nuclear",
     "ats": "ashby",
@@ -348,5 +514,161 @@
     "category": "Batteries, Climate & Nuclear",
     "ats": "lever",
     "slug": "charmindustrial"
+  },
+  {
+    "name": "Ammobia",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "lever",
+    "slug": "ammobia"
+  },
+  {
+    "name": "Molten Industries",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "lever",
+    "slug": "moltenindustries"
+  },
+  {
+    "name": "Blue Current",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "greenhouse",
+    "slug": "bluecurrent"
+  },
+  {
+    "name": "Biosphere",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "greenhouse",
+    "slug": "biosphere"
+  },
+  {
+    "name": "Brimstone",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "ashby",
+    "slug": "brimstone"
+  },
+  {
+    "name": "Anthro Energy",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "workable",
+    "slug": "anthro"
+  },
+  {
+    "name": "Tandem PV",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "ashby",
+    "slug": "tandempv"
+  },
+  {
+    "name": "Applied Intuition",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "ashby",
+    "slug": "applied"
+  },
+  {
+    "name": "Wisk Aero",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "workday",
+    "slug": "wisk",
+    "wd": "wd108",
+    "site": "Wisk_Careers"
+  },
+  {
+    "name": "Lilac Solutions",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "rippling",
+    "slug": "lilac-solutions"
+  },
+  {
+    "name": "EnerVenue",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "rippling",
+    "slug": "enervenue-inc"
+  },
+  {
+    "name": "Ensurge Micropower",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "bamboohr",
+    "slug": "ensurge"
+  },
+  {
+    "name": "ExxonMobil",
+    "category": "Oil, Gas & Energy",
+    "ats": "successfactors",
+    "host": "jobs.exxonmobil.com"
+  },
+  {
+    "name": "Phillips 66",
+    "category": "Oil, Gas & Energy",
+    "ats": "successfactors",
+    "host": "careers.phillips66.com"
+  },
+  {
+    "name": "BASF",
+    "category": "Chemicals & Materials",
+    "ats": "successfactors",
+    "host": "basf.jobs"
+  },
+  {
+    "name": "Eastman",
+    "category": "Chemicals & Materials",
+    "ats": "successfactors",
+    "host": "jobs.eastman.com"
+  },
+  {
+    "name": "LyondellBasell",
+    "category": "Chemicals & Materials",
+    "ats": "successfactors",
+    "host": "careers.lyondellbasell.com"
+  },
+  {
+    "name": "Cargill",
+    "category": "Chemicals & Materials",
+    "ats": "successfactors",
+    "host": "jobs.cargill.com"
+  },
+  {
+    "name": "Solvay",
+    "category": "Chemicals & Materials",
+    "ats": "successfactors",
+    "host": "careers.solvay.com"
+  },
+  {
+    "name": "Linde",
+    "category": "Chemicals & Materials",
+    "ats": "cornerstone",
+    "slug": "linde",
+    "site": "23"
+  },
+  {
+    "name": "Kimberly-Clark",
+    "category": "Chemicals & Materials",
+    "ats": "workday",
+    "slug": "kimberlyclark",
+    "wd": "wd1",
+    "site": "GLOBAL"
+  },
+  {
+    "name": "Skyworks Solutions",
+    "category": "Semiconductors & Electronics",
+    "ats": "successfactors",
+    "host": "careers.skyworksinc.com"
+  },
+  {
+    "name": "Coherent",
+    "category": "Semiconductors & Electronics",
+    "ats": "oracle",
+    "host": "hcwp.fa.us2.oraclecloud.com",
+    "site": "CX_1"
+  },
+  {
+    "name": "QuantumScape",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "successfactors",
+    "host": "careers.quantumscape.com"
+  },
+  {
+    "name": "Fortera",
+    "category": "Batteries, Climate & Nuclear",
+    "ats": "greenhouse",
+    "slug": "forteracorporation"
   }
 ]

@@ -1,5 +1,7 @@
 // Command chemejobs scrapes public ATS job boards (Workday, Greenhouse, Lever,
-// Ashby, SmartRecruiters, Oracle) of top US chemical-engineering employers and
+// Ashby, SmartRecruiters, Oracle, Workable, Breezy, Rippling, BambooHR, ADP,
+// Eightfold, WordPress, SuccessFactors, Cornerstone) of top US
+// chemical-engineering employers and
 // keeps internships, co-ops and new-grad / early-career roles that fit a
 // ChemE background.
 package main

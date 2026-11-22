@@ -41,7 +41,7 @@ type httpError struct {
 
 func (e *httpError) Error() string { return fmt.Sprintf("HTTP %d from %s", e.Status, e.URL) }
 
-func (c *Client) do(ctx context.Context, method, url string, body []byte) ([]byte, error) {
+func (c *Client) do(ctx context.Context, method, url string, body []byte, hdr ...http.Header) ([]byte, error) {
 	var lastErr error
 	for attempt := 0; attempt <= c.Retries; attempt++ {
 		if attempt > 0 {
@@ -64,6 +64,11 @@ func (c *Client) do(ctx context.Context, method, url string, body []byte) ([]byt
 		req.Header.Set("Accept-Language", "en-US,en;q=0.9")
 		if body != nil {
 			req.Header.Set("Content-Type", "application/json")
+		}
+		for _, h := range hdr {
+			for k, v := range h {
+				req.Header[k] = v
+			}
 		}
 
 		c.sem <- struct{}{}

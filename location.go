@@ -33,11 +33,12 @@ var (
 		`luxembourg|switzerland|austria|poland|czech|czechia|slovakia|hungary|romania|bulgaria|greece|turkey|türkiye|sweden|` +
 		`norway|denmark|finland|israel|egypt|saudi|united arab emirates|uae|qatar|kuwait|oman|bahrain|south africa|nigeria|kenya|` +
 		`india|china|hong kong|taiwan|japan|korea|singapore|malaysia|thailand|vietnam|indonesia|philippines|australia|new zealand|` +
-		`toronto|montreal|montréal|calgary|edmonton|vancouver|mississauga|sarnia|ontario|alberta|quebec|québec|london|paris|berlin|munich|` +
+		`toronto|montreal|montréal|calgary|edmonton|vancouver|mississauga|sarnia|ontario|alberta|quebec|québec|british columbia|london|paris|berlin|munich|` +
 		`frankfurt|ludwigshafen|leverkusen|marl|basel|zurich|geneva|amsterdam|rotterdam|antwerp|brussels|dublin|cork|madrid|barcelona|` +
 		`milan|warsaw|krakow|prague|budapest|bucharest|stockholm|copenhagen|oslo|helsinki|shanghai|beijing|shenzhen|guangzhou|` +
 		`bangalore|bengaluru|hyderabad|mumbai|pune|chennai|gurgaon|gurugram|noida|tokyo|osaka|seoul|kuala lumpur|penang|manila|` +
-		`bangkok|jakarta|sydney|melbourne|são paulo|sao paulo|mexico city|monterrey|guadalajara|bogota|bogotá|santiago|buenos aires)\b`)
+		`bangkok|jakarta|sydney|melbourne|são paulo|sao paulo|mexico city|monterrey|guadalajara|bogota|bogotá|santiago|buenos aires|` +
+		`grünheide|grunheide|brandenburg|tilburg|noord-brabant|east attica|santa oliva)\b`)
 )
 
 // IsLikelyUS reports whether a location string could be a US role.

@@ -1413,7 +1413,7 @@ _Updated 2026-11-21 · 191 roles · 47 company boards scraped_
 
 An engine, not a hand-kept spreadsheet. It polls public career feeds at ChemE-heavy employers, keeps internships / co-ops / new-grad roles that fit a chemical-engineering background, removes duplicates, and rebuilds the list in this README and in [`JOBS.md`](JOBS.md) on its own.
 
-Every link comes straight from the company ATS — Workday, Greenhouse, Lever, Ashby, SmartRecruiters, or Oracle — so the list stays current instead of rotting.
+Every link comes straight from the company ATS — Workday, Greenhouse, Lever, Ashby, SmartRecruiters, Oracle, Workable, Breezy, Rippling, BambooHR, ADP, Eightfold, WordPress, SuccessFactors, or Cornerstone — so the list stays current instead of rotting.
 
 **Fit key on each role**
 
@@ -1429,7 +1429,7 @@ Every link comes straight from the company ATS — Workday, Greenhouse, Lever, A
 | **Roles** | Internships, co-ops, new-grad / early-career (Engineer I, Associate, rotational programs) |
 | **Region** | United States (ambiguous locations are kept; clearly foreign ones are dropped) |
 | **Age** | Posted within the last 30 days by default |
-| **Employers** | 47 boards across semiconductors, chemicals & materials, power, and batteries/climate/nuclear |
+| **Employers** | 96 boards across semiconductors, chemicals & materials, power, and batteries/climate/nuclear |
 
 Inspired by:
 - [zshah101/Automated-List-Of-Summer-2027-and-Fall-2026-Tech-Internships](https://github.com/zshah101/Automated-List-Of-Summer-2027-and-Fall-2026-Tech-Internships) — ATS feeds + accuracy verify
@@ -1437,7 +1437,7 @@ Inspired by:
 
 ## How it works
 
-1. **Connectors** (`connectors.go`) hit each board. Keyword-only ATSs (Workday / Oracle / SmartRecruiters) are searched for `intern`, `co-op`, `chemical engineer`, `process engineer`, `new grad`, `graduate`, `entry level`, `early career`, `controls engineer`, `supply chain engineer`, and `R&D engineer`. Search terms run concurrently after a fast probe of the first term so a dead tenant fails quickly.
+1. **Connectors** (`connectors.go`) hit each board. Keyword-only ATSs (Workday / Oracle / SmartRecruiters) are searched for `intern`, `co-op`, `chemical engineer`, `process engineer`, `new grad`, `graduate`, `entry level`, `early career`, `controls engineer`, `supply chain engineer`, and `R&D engineer`. Search terms run concurrently after a fast probe of the first term so a dead tenant fails quickly. Greenhouse, Lever, Ashby, Workable, Breezy, Rippling, BambooHR, ADP, Eightfold, WordPress, SuccessFactors (RSS), and Cornerstone return the full public board.
 2. **Classifier** (`filter.go`) keeps early-career titles and scores ChemE vs general Engineering fit. Senior / II–III / lead / manager / postdoc and clearly off-discipline titles (software, electrical, mechanical, finance, supply-chain *analyst*…) are dropped.
 3. **Location** (`location.go`) keeps US roles. Unknown locations are kept rather than risk dropping a real US posting.
 4. **Dedup + store**
@@ -1474,9 +1474,9 @@ go test ./...
 
 The GitHub Action in [`.github/workflows/scrape.yml`](.github/workflows/scrape.yml) runs every 6 hours: `go test` → scrape → `-verify` → commit the refreshed README, `JOBS.md`, and `data/jobs.*`. You can also start it from the **Actions** tab.
 
-## Companies covered (47 boards)
+## Companies covered (97 boards)
 
-Examples: Dow, 3M, Chemours, Corteva, Air Products, Albemarle, PPG, Honeywell, Sherwin-Williams, Intel, Applied Materials, Micron, GlobalFoundries, Entegris, KLA, Wolfspeed, GE Vernova, Redwood Materials, Plug Power, X-energy and more. Full list: [`data/companies.json`](data/companies.json).
+Examples: Dow, 3M, ExxonMobil, BASF, Cargill, Linde, Eastman, Chemours, Corteva, Air Products, Albemarle, PPG, Honeywell, Sherwin-Williams, Chevron, ConocoPhillips, Marathon, Oxy, Shell, BP, P&G, Clorox, Kraft Heinz, Pfizer, Merck, Lilly, J&J, AbbVie, Amgen, Intel, Applied Materials, Micron, Redwood Materials, Tesla, Lyten, Form Energy, Amprius, Solid Power, Group14, Plug Power, X-energy and more. Full list: [`data/companies.json`](data/companies.json).
 
 ### Adding a company
 
@@ -1491,7 +1491,16 @@ Add an entry to `data/companies.json`. To find the values, open the company's ca
 | Ashby | `jobs.ashbyhq.com/acme` | `{"ats":"ashby","slug":"acme"}` |
 | SmartRecruiters | `jobs.smartrecruiters.com/AbbVie` | `{"ats":"smartrecruiters","slug":"AbbVie"}` |
 | Oracle | `https://xxxx.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2` | `{"ats":"oracle","host":"xxxx.fa.us6.oraclecloud.com","site":"CX_2"}` |
+| Workable | `apply.workable.com/amprius` | `{"ats":"workable","slug":"amprius"}` |
+| Breezy | `forge-nano.breezy.hr` | `{"ats":"breezy","slug":"forge-nano"}` |
+| Rippling | `ats.rippling.com/lilac-solutions/jobs` | `{"ats":"rippling","slug":"lilac-solutions"}` |
+| BambooHR | `ensurge.bamboohr.com/careers` | `{"ats":"bamboohr","slug":"ensurge"}` |
+| ADP | `workforcenow.adp.com/...?cid=` | `{"ats":"adp","slug":"<cid>"}` |
+| Eightfold | `jobs.infineon.com/careers` | `{"ats":"eightfold","host":"jobs.infineon.com","slug":"infineon.com"}` |
+| WordPress | `example.com/wp-json/wp/v2/jobpost` | `{"ats":"wordpress","host":"example.com","slug":"jobpost"}` |
+| SuccessFactors | `jobs.cargill.com/search/` (site serves `/services/rss/job/`) | `{"ats":"successfactors","host":"jobs.cargill.com"}` |
+| Cornerstone | `linde.csod.com/ux/ats/careersite/23/home?c=linde` | `{"ats":"cornerstone","slug":"linde","site":"23"}` |
 
 Each entry also needs `name` and `category`. Set `"disabled": true` to skip a board without deleting it.
 
-**Not covered yet:** ExxonMobil, BASF, Eastman, Celanese, LyondellBasell, Linde, Cargill, Kimberly-Clark, Phillips 66, Valero and Koch run custom or SuccessFactors career sites that have no public JSON feed.
+**Not covered yet:** Celanese (iCIMS), Sanmina (Talemetry behind Cloudflare), Valero (Taleo), Koch (Avature), General Atomics (BrassRing), and Synopsys (Radancy) have no open feed this scraper can call. Tesla's catalogue is included: plain HTTP is blocked by Akamai, so that one board is read through Chrome.

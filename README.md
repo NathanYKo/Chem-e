@@ -11,14 +11,14 @@ The table below is the live list, rewritten on every scrape. Same data: [`JOBS.m
 
 <!-- jobs:start -->
 
-_Updated 2026-11-24 · 301 roles · 96 company boards scraped (1 unreachable this run)_
+_Updated 2026-11-24 · 308 roles · 96 company boards scraped_
 
 **Fit:** 🧪 = title names a ChemE discipline (process, polymer, refining, bioprocess…) · ⚙️ = general engineering early-talent role at a chem-heavy employer (usually open to ChemE majors)
 
-**Jump to:** [Internships (177)](#internships) · [Co-ops (41)](#co-ops) · [New Grad / Early Career (83)](#new-grad)
+**Jump to:** [Internships (182)](#internships) · [Co-ops (39)](#co-ops) · [New Grad / Early Career (87)](#new-grad)
 
 <a id="internships"></a>
-## 🎓 Internships (177)
+## 🎓 Internships (182)
 
 <table>
 <thead>
@@ -32,10 +32,94 @@ _Updated 2026-11-24 · 301 roles · 96 company boards scraped (1 unreachable thi
 </thead>
 <tbody>
 <tr>
+<td valign="top"><strong>ASML</strong></td>
+<td valign="top">🧪 Internship - Optical and Metrology Engineering</td>
+<td valign="top">San Diego, CA, USA</td>
+<td valign="top" align="center"><a href="https://asml.wd3.myworkdayjobs.com/ASMLEXT1/job/San-Diego-CA-USA/Internship---Optical-and-Metrology-Engineering_J-00358248">Apply</a></td>
+<td valign="top" align="center">Nov 24</td>
+</tr>
+<tr>
+<td valign="top">↳</td>
+<td valign="top">⚙️ Internship - Sustaining Operations &amp; Digital Solutions Specialist</td>
+<td valign="top">Chandler, AZ, USA</td>
+<td valign="top" align="center"><a href="https://asml.wd3.myworkdayjobs.com/ASMLEXT1/job/Chandler-AZ-USA/Internship---Sustaining-Operations---Digital-Solutions-Specialist_J-00357869">Apply</a></td>
+<td valign="top" align="center">Nov 24</td>
+</tr>
+<tr>
+<td valign="top"><strong>Applied Materials</strong></td>
+<td valign="top">⚙️ 2027 Summer Facilities &amp; Reals Estate Technical Engineer Intern - Bachelors (Gloucester, MA)</td>
+<td valign="top">Gloucester,MA</td>
+<td valign="top" align="center"><a href="https://amat.wd1.myworkdayjobs.com/External/job/GloucesterMA/XMLNAME-2027-Summer-Facilities---Reals-Estate-Technical-Engineer-Intern---Bachelors--Gloucester--MA-_R2633688">Apply</a></td>
+<td valign="top" align="center">Nov 24</td>
+</tr>
+<tr>
+<td valign="top"><strong>Bloom Energy</strong></td>
+<td valign="top">⚙️ Manufacturing Engineer Interns – Tool Installation &amp; Equipment Ramp</td>
+<td valign="top">Fremont, California</td>
+<td valign="top" align="center"><a href="https://bloomenergy.wd1.myworkdayjobs.com/bloomenergycareers/job/Fremont-California/Manufacturing-Engineer-Interns---Tool-Installation---Equipment-Ramp_JR-25379">Apply</a></td>
+<td valign="top" align="center">Nov 24</td>
+</tr>
+<tr>
 <td valign="top"><strong>Cargill</strong></td>
 <td valign="top">⚙️ Operations Management Intern, Summer 2027 - Food (Multiple U.S. Locations)</td>
 <td valign="top">Minneapolis, Minnesota, United States</td>
 <td valign="top" align="center"><a href="https://jobs.cargill.com/job/Minneapolis-Operations-Management-Intern%2C-Summer-2027-Food-%28Multiple-U_S_-Locations%29-Minn-55450/1357310657/">Apply</a></td>
+<td valign="top" align="center">Nov 24</td>
+</tr>
+<tr>
+<td valign="top"><strong>GE Vernova</strong></td>
+<td valign="top">🧪 Controls Engineering Intern</td>
+<td valign="top">Campinas</td>
+<td valign="top" align="center"><a href="https://gevernova.wd5.myworkdayjobs.com/vernova_externalsite/job/Campinas/Controls-Engineering-Intern_R5058717-1">Apply</a></td>
+<td valign="top" align="center">Nov 24</td>
+</tr>
+<tr>
+<td valign="top">↳</td>
+<td valign="top">⚙️ Digital Technology Development Program Intern</td>
+<td valign="top">2 Locations</td>
+<td valign="top" align="center"><a href="https://gevernova.wd5.myworkdayjobs.com/vernova_externalsite/job/Budapest-HU-26/DTDP-Intern_R5052729-3">Apply</a></td>
+<td valign="top" align="center">Nov 24</td>
+</tr>
+<tr>
+<td valign="top">↳</td>
+<td valign="top">⚙️ GE Vernova Engineering Automation Internship - Summer 2027</td>
+<td valign="top">Charleroi USA</td>
+<td valign="top" align="center"><a href="https://gevernova.wd5.myworkdayjobs.com/vernova_externalsite/job/Charleroi-USA/GE-Vernova-Engineering-Automation-Internship---Summer-2027_R5059697-2">Apply</a></td>
+<td valign="top" align="center">Nov 24</td>
+</tr>
+<tr>
+<td valign="top">↳</td>
+<td valign="top">⚙️ GE Vernova MES Implementation &amp; Manufacturing Data Internship - Summer 2027</td>
+<td valign="top">Charleroi USA</td>
+<td valign="top" align="center"><a href="https://gevernova.wd5.myworkdayjobs.com/vernova_externalsite/job/Charleroi-USA/GE-Vernova-MES-Implementation---Manufacturing-Data-Internship---Summer-2027_R5059700-2">Apply</a></td>
+<td valign="top" align="center">Nov 24</td>
+</tr>
+<tr>
+<td valign="top">↳</td>
+<td valign="top">⚙️ GE Vernova Manufacturing Quality &amp; Digital Work Instructions Internship - Summer 2027</td>
+<td valign="top">Charleroi USA</td>
+<td valign="top" align="center"><a href="https://gevernova.wd5.myworkdayjobs.com/vernova_externalsite/job/Charleroi-USA/GE-Vernova-Manufacturing-Quality---Digital-Work-Instructions-Internship---Summer-2027_R5059702-2">Apply</a></td>
+<td valign="top" align="center">Nov 24</td>
+</tr>
+<tr>
+<td valign="top">↳</td>
+<td valign="top">⚙️ GE Vernova Manufacturing Systems &amp; SAP Integration Internship - Summer 2027</td>
+<td valign="top">Charleroi USA</td>
+<td valign="top" align="center"><a href="https://gevernova.wd5.myworkdayjobs.com/vernova_externalsite/job/Charleroi-USA/GE-Vernova-Manufacturing-Systems---SAP-Integration-Internship---Summer-2027_R5059709-2">Apply</a></td>
+<td valign="top" align="center">Nov 24</td>
+</tr>
+<tr>
+<td valign="top">↳</td>
+<td valign="top">⚙️ GE Vernova Robotics &amp; Manufacturing Automation Internship - Summer 2027</td>
+<td valign="top">Charleroi USA</td>
+<td valign="top" align="center"><a href="https://gevernova.wd5.myworkdayjobs.com/vernova_externalsite/job/Charleroi-USA/GE-Vernova-Robotics---Manufacturing-Automation-Internship---Summer-2027_R5059698-2">Apply</a></td>
+<td valign="top" align="center">Nov 24</td>
+</tr>
+<tr>
+<td valign="top"><strong>Sherwin-Williams</strong></td>
+<td valign="top">🧪 2027 Environmental Health and Safety Intern - Covington, GA</td>
+<td valign="top">Covington, GA, United States</td>
+<td valign="top" align="center"><a href="https://ejhp.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/2625214">Apply</a></td>
 <td valign="top" align="center">Nov 24</td>
 </tr>
 <tr>
@@ -193,6 +277,13 @@ _Updated 2026-11-24 · 301 roles · 96 company boards scraped (1 unreachable thi
 <td valign="top" align="center">Nov 20</td>
 </tr>
 <tr>
+<td valign="top">↳</td>
+<td valign="top">⚙️ Device Engineering Intern, Silicon Photonics (Summer 2027)</td>
+<td valign="top">USA - New York - Malta</td>
+<td valign="top" align="center"><a href="https://globalfoundries.wd1.myworkdayjobs.com/External/job/USA---New-York---Malta/Device-Engineering-Intern--Silicon-Photonics--Summer-2027-_JR-2604263">Apply</a></td>
+<td valign="top" align="center">Nov 20</td>
+</tr>
+<tr>
 <td valign="top"><strong>Huntsman</strong></td>
 <td valign="top">🧪 Process Development Engineering Intern</td>
 <td valign="top">USA - South Carolina - Rock Hill</td>
@@ -253,20 +344,6 @@ _Updated 2026-11-24 · 301 roles · 96 company boards scraped (1 unreachable thi
 <td valign="top">⚙️ Manufacturing Product Engineering Intern</td>
 <td valign="top">Newark, Delaware</td>
 <td valign="top" align="center"><a href="https://bloomenergy.wd1.myworkdayjobs.com/bloomenergycareers/job/Newark-Delaware/Manufacturing-Product-Engineering-Intern_JR-25415">Apply</a></td>
-<td valign="top" align="center">Nov 19</td>
-</tr>
-<tr>
-<td valign="top"><strong>Infineon Technologies</strong></td>
-<td valign="top">⚙️ Internship - Test Engineering</td>
-<td valign="top">Melaka</td>
-<td valign="top" align="center"><a href="https://jobs.infineon.com/careers/job/563808972396234">Apply</a></td>
-<td valign="top" align="center">Nov 19</td>
-</tr>
-<tr>
-<td valign="top"><strong>KLA</strong></td>
-<td valign="top">⚙️ Product Development Engineer Intern</td>
-<td valign="top">Milpitas, CA</td>
-<td valign="top" align="center"><a href="https://kla.wd1.myworkdayjobs.com/Search/job/Milpitas-CA/Product-Development-Engineer-Intern_2643570-1">Apply</a></td>
 <td valign="top" align="center">Nov 19</td>
 </tr>
 <tr>
@@ -351,20 +428,6 @@ _Updated 2026-11-24 · 301 roles · 96 company boards scraped (1 unreachable thi
 <td valign="top">⚙️ Process Sustaining Engineering Intern</td>
 <td valign="top">2 Locations</td>
 <td valign="top" align="center"><a href="https://analogdevices.wd1.myworkdayjobs.com/External/job/US-MA-Chelmsford-Alpha/Process-Sustaining-Engineering-Intern_R269554-1">Apply</a></td>
-<td valign="top" align="center">Nov 18</td>
-</tr>
-<tr>
-<td valign="top"><strong>Bloom Energy</strong></td>
-<td valign="top">⚙️ Energy Transition Solutions Intern</td>
-<td valign="top">San Jose, California</td>
-<td valign="top" align="center"><a href="https://bloomenergy.wd1.myworkdayjobs.com/bloomenergycareers/job/San-Jose-California/Energy-Transition-Solutions-Intern_JR-25456">Apply</a></td>
-<td valign="top" align="center">Nov 18</td>
-</tr>
-<tr>
-<td valign="top">↳</td>
-<td valign="top">⚙️ Manufacturing Engineer Interns – Tool Installation &amp; Equipment Ramp</td>
-<td valign="top">Fremont, California</td>
-<td valign="top" align="center"><a href="https://bloomenergy.wd1.myworkdayjobs.com/bloomenergycareers/job/Fremont-California/Manufacturing-Engineer-Interns---Tool-Installation---Equipment-Ramp_JR-25383">Apply</a></td>
 <td valign="top" align="center">Nov 18</td>
 </tr>
 <tr>
@@ -523,13 +586,6 @@ _Updated 2026-11-24 · 301 roles · 96 company boards scraped (1 unreachable thi
 </tr>
 <tr>
 <td valign="top">↳</td>
-<td valign="top">⚙️ Materials Solutions Engineering Intern - Summer 2027</td>
-<td valign="top">Aurora, IL</td>
-<td valign="top" align="center"><a href="https://entegris.wd1.myworkdayjobs.com/entegriscareers/job/Aurora-IL/Materials-Solutions-Engineering-Intern---Summer-2027_REQ-15856">Apply</a></td>
-<td valign="top" align="center">Nov 16</td>
-</tr>
-<tr>
-<td valign="top">↳</td>
 <td valign="top">⚙️ Product Development Engineering Intern</td>
 <td valign="top">Chaska, MN</td>
 <td valign="top" align="center"><a href="https://entegris.wd1.myworkdayjobs.com/entegriscareers/job/Chaska-MN/Product-Development-Engineering-Intern_REQ-15875">Apply</a></td>
@@ -568,6 +624,13 @@ _Updated 2026-11-24 · 301 roles · 96 company boards scraped (1 unreachable thi
 <td valign="top">🧪 Automation Engineering Intern</td>
 <td valign="top">Fremont, California</td>
 <td valign="top" align="center"><a href="https://bloomenergy.wd1.myworkdayjobs.com/bloomenergycareers/job/Fremont-California/Automation-Engineering-Intern_JR-25265">Apply</a></td>
+<td valign="top" align="center">Nov 13</td>
+</tr>
+<tr>
+<td valign="top">↳</td>
+<td valign="top">⚙️ Energy Transition Solutions Intern</td>
+<td valign="top">San Jose, California</td>
+<td valign="top" align="center"><a href="https://bloomenergy.wd1.myworkdayjobs.com/bloomenergycareers/job/San-Jose-California/Energy-Transition-Solutions-Intern_JR-25357">Apply</a></td>
 <td valign="top" align="center">Nov 13</td>
 </tr>
 <tr>
@@ -642,13 +705,6 @@ _Updated 2026-11-24 · 301 roles · 96 company boards scraped (1 unreachable thi
 </tr>
 <tr>
 <td valign="top">↳</td>
-<td valign="top">🧪 Formulation Scientist, Intern - Summer 2027</td>
-<td valign="top">Aurora, IL</td>
-<td valign="top" align="center"><a href="https://entegris.wd1.myworkdayjobs.com/entegriscareers/job/Aurora-IL/Formulation-Scientist--Intern---Summer-2027_REQ-15876">Apply</a></td>
-<td valign="top" align="center">Nov 12</td>
-</tr>
-<tr>
-<td valign="top">↳</td>
 <td valign="top">⚙️ Manufacturing Engineer Intern</td>
 <td valign="top">Colorado Springs, CO</td>
 <td valign="top" align="center"><a href="https://entegris.wd1.myworkdayjobs.com/entegriscareers/job/Colorado-Springs-CO/Manufacturing-Engineer-Intern_REQ-15871">Apply</a></td>
@@ -659,6 +715,13 @@ _Updated 2026-11-24 · 301 roles · 96 company boards scraped (1 unreachable thi
 <td valign="top">⚙️ Manufacturing Engineering Intern - Summer 2027</td>
 <td valign="top">Aurora, IL</td>
 <td valign="top" align="center"><a href="https://entegris.wd1.myworkdayjobs.com/entegriscareers/job/Aurora-IL/Manufacturing-Engineering-Intern---Summer-2027_REQ-15835-1">Apply</a></td>
+<td valign="top" align="center">Nov 12</td>
+</tr>
+<tr>
+<td valign="top">↳</td>
+<td valign="top">⚙️ Materials Solutions Engineering Intern - Summer 2027</td>
+<td valign="top">Aurora, IL</td>
+<td valign="top" align="center"><a href="https://entegris.wd1.myworkdayjobs.com/entegriscareers/job/Aurora-IL/Materials-Solutions-Engineering-Intern---Summer-2027_REQ-15860">Apply</a></td>
 <td valign="top" align="center">Nov 12</td>
 </tr>
 <tr>
@@ -774,13 +837,6 @@ _Updated 2026-11-24 · 301 roles · 96 company boards scraped (1 unreachable thi
 <td valign="top" align="center">Nov 10</td>
 </tr>
 <tr>
-<td valign="top"><strong>GE Vernova</strong></td>
-<td valign="top">⚙️ GE Vernova Technical Field Advisor Intern - 2027</td>
-<td valign="top">Remote</td>
-<td valign="top" align="center"><a href="https://gevernova.wd5.myworkdayjobs.com/vernova_externalsite/job/Remote/GE-Vernova-Technical-Field-Advisor-Intern---2027_R5058143-3">Apply</a></td>
-<td valign="top" align="center">Nov 10</td>
-</tr>
-<tr>
 <td valign="top"><strong>GlobalFoundries</strong></td>
 <td valign="top">⚙️ Systems Engineering Intern (Summer 2027)</td>
 <td valign="top">USA - Texas - Richardson</td>
@@ -792,13 +848,6 @@ _Updated 2026-11-24 · 301 roles · 96 company boards scraped (1 unreachable thi
 <td valign="top">⚙️ Engineering Intern</td>
 <td valign="top">Valdosta, Georgia, United States</td>
 <td valign="top" align="center"><a href="https://corteva.wd5.myworkdayjobs.com/corteva/job/Valdosta-Georgia-United-States/Engineering-Intern_248409W">Apply</a></td>
-<td valign="top" align="center">Nov 9</td>
-</tr>
-<tr>
-<td valign="top"><strong>GE Vernova</strong></td>
-<td valign="top">⚙️ GE Vernova Pivot to Value (P2V) Value Engineering Internship 2027</td>
-<td valign="top">2 Locations</td>
-<td valign="top" align="center"><a href="https://gevernova.wd5.myworkdayjobs.com/vernova_externalsite/job/Greenville/GE-Vernova-Pivot-to-Value--P2V--Value-Engineering-Internship-2027_R5057971-2">Apply</a></td>
 <td valign="top" align="center">Nov 9</td>
 </tr>
 <tr>
@@ -854,7 +903,7 @@ _Updated 2026-11-24 · 301 roles · 96 company boards scraped (1 unreachable thi
 <td valign="top"><strong>GlobalFoundries</strong></td>
 <td valign="top">⚙️ Advanced Manufacturing Engineering Intern (Mar-Aug 2027)</td>
 <td valign="top">SGP - Woodlands</td>
-<td valign="top" align="center"><a href="https://globalfoundries.wd1.myworkdayjobs.com/External/job/SGP---Woodlands/Advanced-Manufacturing-Engineering-Intern--Mar-Aug-2027-_JR-2603762-1">Apply</a></td>
+<td valign="top" align="center"><a href="https://globalfoundries.wd1.myworkdayjobs.com/External/job/SGP---Woodlands/Advanced-Manufacturing-Engineering-Intern--Mar-Aug-2027-_JR-2603846">Apply</a></td>
 <td valign="top" align="center">Nov 6</td>
 </tr>
 <tr>
@@ -862,13 +911,6 @@ _Updated 2026-11-24 · 301 roles · 96 company boards scraped (1 unreachable thi
 <td valign="top">⚙️ Advanced Manufacturing Engineering Intern (May-Dec 2027)</td>
 <td valign="top">SGP - Woodlands</td>
 <td valign="top" align="center"><a href="https://globalfoundries.wd1.myworkdayjobs.com/External/job/SGP---Woodlands/Advanced-Manufacturing-Engineering-Intern--May-Dec-2027-_JR-2603840">Apply</a></td>
-<td valign="top" align="center">Nov 6</td>
-</tr>
-<tr>
-<td valign="top">↳</td>
-<td valign="top">⚙️ Device Engineering Intern, Silicon Photonics (Summer 2027)</td>
-<td valign="top">USA - New York - Malta</td>
-<td valign="top" align="center"><a href="https://globalfoundries.wd1.myworkdayjobs.com/External/job/USA---New-York---Malta/Device-Engineering-Intern--Silicon-Photonics--Summer-2027-_JR-2604264">Apply</a></td>
 <td valign="top" align="center">Nov 6</td>
 </tr>
 <tr>
@@ -903,7 +945,7 @@ _Updated 2026-11-24 · 301 roles · 96 company boards scraped (1 unreachable thi
 <td valign="top"><strong>Lumentum</strong></td>
 <td valign="top">⚙️ Internship - Field Application Engineer</td>
 <td valign="top">USA - CA - San Jose (Ridder)</td>
-<td valign="top" align="center"><a href="https://lumentum.wd5.myworkdayjobs.com/LITE/job/USA---CA---San-Jose-Ridder/Internship---Field-Application-Engineer_20261644">Apply</a></td>
+<td valign="top" align="center"><a href="https://lumentum.wd5.myworkdayjobs.com/LITE/job/USA---CA---San-Jose-Ridder/Internship---Field-Application-Engineer_20261645">Apply</a></td>
 <td valign="top" align="center">Nov 5</td>
 </tr>
 <tr>
@@ -940,6 +982,13 @@ _Updated 2026-11-24 · 301 roles · 96 company boards scraped (1 unreachable thi
 <td valign="top">Marcy, New York</td>
 <td valign="top" align="center"><a href="https://cree.wd108.myworkdayjobs.com/EXT/job/Marcy-New-York/Thin-Films-Engineering-Intern_26-1009">Apply</a></td>
 <td valign="top" align="center">Nov 3</td>
+</tr>
+<tr>
+<td valign="top"><strong>GlobalFoundries</strong></td>
+<td valign="top">⚙️ Advanced Manufacturing Engineering Intern, Process &amp; Equipment (Summer 2027)</td>
+<td valign="top">USA - New York - Malta</td>
+<td valign="top" align="center"><a href="https://globalfoundries.wd1.myworkdayjobs.com/External/job/USA---New-York---Malta/Advanced-Manufacturing-Engineering-Intern--Process---Equipment--Summer-2027-_JR-2604595">Apply</a></td>
+<td valign="top" align="center">Nov 2</td>
 </tr>
 <tr>
 <td valign="top"><strong>Skyworks Solutions</strong></td>
@@ -991,13 +1040,6 @@ _Updated 2026-11-24 · 301 roles · 96 company boards scraped (1 unreachable thi
 <td valign="top" align="center">Oct 29</td>
 </tr>
 <tr>
-<td valign="top"><strong>Micron</strong></td>
-<td valign="top">🧪 Intern - Equipment Engineer</td>
-<td valign="top">Manassas, VA - Fab 6</td>
-<td valign="top" align="center"><a href="https://micron.wd1.myworkdayjobs.com/External/job/Manassas-VA----Fab-6/Intern---Equipment-Engineer_JR114818">Apply</a></td>
-<td valign="top" align="center">Oct 29</td>
-</tr>
-<tr>
 <td valign="top"><strong>Skyworks Solutions</strong></td>
 <td valign="top">⚙️ Analog Design Engineering Intern</td>
 <td valign="top">San Jose, United States</td>
@@ -1009,13 +1051,6 @@ _Updated 2026-11-24 · 301 roles · 96 company boards scraped (1 unreachable thi
 <td valign="top">⚙️ Applications Engineering Intern</td>
 <td valign="top">Richardson, United States</td>
 <td valign="top" align="center"><a href="https://careers.skyworksinc.com/job/Richardson-Applications-Engineering-Intern-TX-75081/1445103000/">Apply</a></td>
-<td valign="top" align="center">Oct 29</td>
-</tr>
-<tr>
-<td valign="top">↳</td>
-<td valign="top">🧪 Device and Process Development Intern</td>
-<td valign="top">Richardson, United States</td>
-<td valign="top" align="center"><a href="https://careers.skyworksinc.com/job/Richardson-Device-and-Process-Development-Intern-TX-75080/1445097000/">Apply</a></td>
 <td valign="top" align="center">Oct 29</td>
 </tr>
 <tr>
@@ -1040,13 +1075,6 @@ _Updated 2026-11-24 · 301 roles · 96 company boards scraped (1 unreachable thi
 <td valign="top" align="center">Oct 29</td>
 </tr>
 <tr>
-<td valign="top">↳</td>
-<td valign="top">⚙️ Test Engineering Intern</td>
-<td valign="top">Greensboro, United States</td>
-<td valign="top" align="center"><a href="https://careers.skyworksinc.com/job/Greensboro-Test-Engineering-Intern-NC-27409/1445094800/">Apply</a></td>
-<td valign="top" align="center">Oct 29</td>
-</tr>
-<tr>
 <td valign="top"><strong>Applied Materials</strong></td>
 <td valign="top">⚙️ Summer 2027 Industrial Engineering Intern- Bachelor&#39;s (Santa Clara, CA)</td>
 <td valign="top">Santa Clara,CA</td>
@@ -1062,9 +1090,9 @@ _Updated 2026-11-24 · 301 roles · 96 company boards scraped (1 unreachable thi
 </tr>
 <tr>
 <td valign="top"><strong>Skyworks Solutions</strong></td>
-<td valign="top">⚙️ Characterization Engineering Intern</td>
-<td valign="top">Greensboro, United States</td>
-<td valign="top" align="center"><a href="https://careers.skyworksinc.com/job/Greensboro-Characterization-Engineering-Intern-NC-27409/1444641100/">Apply</a></td>
+<td valign="top">🧪 Device and Process Development Intern</td>
+<td valign="top">Richardson, United States</td>
+<td valign="top" align="center"><a href="https://careers.skyworksinc.com/job/Richardson-Device-and-Process-Development-Intern-TX-75080/1444550000/">Apply</a></td>
 <td valign="top" align="center">Oct 28</td>
 </tr>
 <tr>
@@ -1077,22 +1105,22 @@ _Updated 2026-11-24 · 301 roles · 96 company boards scraped (1 unreachable thi
 <tr>
 <td valign="top">↳</td>
 <td valign="top">⚙️ Product Engineering Intern</td>
-<td valign="top">Greensboro, United States</td>
-<td valign="top" align="center"><a href="https://careers.skyworksinc.com/job/Greensboro-Product-Engineering-Intern-NC-27409/1444661300/">Apply</a></td>
-<td valign="top" align="center">Oct 28</td>
-</tr>
-<tr>
-<td valign="top">↳</td>
-<td valign="top">⚙️ Product Engineering Intern</td>
 <td valign="top">Hillsboro, United States</td>
 <td valign="top" align="center"><a href="https://careers.skyworksinc.com/job/Hillsboro-Product-Engineering-Intern-IL-97124/1444666000/">Apply</a></td>
 <td valign="top" align="center">Oct 28</td>
 </tr>
 <tr>
 <td valign="top">↳</td>
-<td valign="top">⚙️ RFIC Design Engineering Intern</td>
+<td valign="top">⚙️ Product Engineering Intern</td>
 <td valign="top">Greensboro, United States</td>
-<td valign="top" align="center"><a href="https://careers.skyworksinc.com/job/Greensboro-RFIC-Design-Engineering-Intern-NC-27409/1444614500/">Apply</a></td>
+<td valign="top" align="center"><a href="https://careers.skyworksinc.com/job/Greensboro-Product-Engineering-Intern-NC-27409/1444661300/">Apply</a></td>
+<td valign="top" align="center">Oct 28</td>
+</tr>
+<tr>
+<td valign="top">↳</td>
+<td valign="top">⚙️ Test Engineering Intern</td>
+<td valign="top">Greensboro, United States</td>
+<td valign="top" align="center"><a href="https://careers.skyworksinc.com/job/Greensboro-Test-Engineering-Intern-NC-27409/1444545600/">Apply</a></td>
 <td valign="top" align="center">Oct 28</td>
 </tr>
 <tr>
@@ -1131,13 +1159,6 @@ _Updated 2026-11-24 · 301 roles · 96 company boards scraped (1 unreachable thi
 <td valign="top" align="center">Oct 27</td>
 </tr>
 <tr>
-<td valign="top"><strong>Marvell Technology</strong></td>
-<td valign="top">⚙️ AIOps Forward Deployment Engineer Intern, BS - Summer 2027</td>
-<td valign="top">Santa Clara, CA</td>
-<td valign="top" align="center"><a href="https://marvell.wd1.myworkdayjobs.com/MarvellCareers/job/Santa-Clara-CA/Project-Management-Intern--MBA---Summer-2027_2604440">Apply</a></td>
-<td valign="top" align="center">Oct 27</td>
-</tr>
-<tr>
 <td valign="top"><strong>Micron</strong></td>
 <td valign="top">⚙️ Intern - Technical Program Manager, Program Management Office (PMO)</td>
 <td valign="top">Boise, ID - Main Site</td>
@@ -1156,6 +1177,13 @@ _Updated 2026-11-24 · 301 roles · 96 company boards scraped (1 unreachable thi
 <td valign="top">🧪 Business Process Integration Intern</td>
 <td valign="top">Greensboro, United States</td>
 <td valign="top" align="center"><a href="https://careers.skyworksinc.com/job/Greensboro-Business-Process-Integration-Intern-NC-27409/1444151800/">Apply</a></td>
+<td valign="top" align="center">Oct 27</td>
+</tr>
+<tr>
+<td valign="top">↳</td>
+<td valign="top">⚙️ Characterization Engineering Intern</td>
+<td valign="top">Greensboro, United States</td>
+<td valign="top" align="center"><a href="https://careers.skyworksinc.com/job/Greensboro-Characterization-Engineering-Intern-NC-27409/1444327600/">Apply</a></td>
 <td valign="top" align="center">Oct 27</td>
 </tr>
 <tr>
@@ -1198,6 +1226,13 @@ _Updated 2026-11-24 · 301 roles · 96 company boards scraped (1 unreachable thi
 <td valign="top">🧪 Process Engineering Intern</td>
 <td valign="top">Richardson, United States</td>
 <td valign="top" align="center"><a href="https://careers.skyworksinc.com/job/Richardson-Process-Engineering-Intern-TX-75080/1444219500/">Apply</a></td>
+<td valign="top" align="center">Oct 27</td>
+</tr>
+<tr>
+<td valign="top">↳</td>
+<td valign="top">⚙️ RFIC Design Engineering Intern</td>
+<td valign="top">Greensboro, United States</td>
+<td valign="top" align="center"><a href="https://careers.skyworksinc.com/job/Greensboro-RFIC-Design-Engineering-Intern-NC-27409/1444072800/">Apply</a></td>
 <td valign="top" align="center">Oct 27</td>
 </tr>
 <tr>
@@ -1274,7 +1309,7 @@ _Updated 2026-11-24 · 301 roles · 96 company boards scraped (1 unreachable thi
 </table>
 
 <a id="co-ops"></a>
-## 🔁 Co-ops (41)
+## 🔁 Co-ops (39)
 
 <table>
 <thead>
@@ -1309,21 +1344,7 @@ _Updated 2026-11-24 · 301 roles · 96 company boards scraped (1 unreachable thi
 <td valign="top" align="center">Nov 23</td>
 </tr>
 <tr>
-<td valign="top">↳</td>
-<td valign="top">⚙️ Wireless Protocol Engineer Co-Op (Winter Spring 2027)</td>
-<td valign="top">Hillsboro, OR, United States</td>
-<td valign="top" align="center"><a href="https://careers.skyworksinc.com/job/Hillsboro-Wireless-Protocol-Engineer-Co-Op-%28Winter-Spring-2027%29-OR-97006/1423709700/">Apply</a></td>
-<td valign="top" align="center">Nov 21</td>
-</tr>
-<tr>
 <td valign="top"><strong>Entegris</strong></td>
-<td valign="top">⚙️ Manufacturing Engineering Co-Op</td>
-<td valign="top">Chaska, MN</td>
-<td valign="top" align="center"><a href="https://entegris.wd1.myworkdayjobs.com/entegriscareers/job/Chaska-MN/Manufacturing-Engineering--Co-Op_REQ-14447-1">Apply</a></td>
-<td valign="top" align="center">Nov 19</td>
-</tr>
-<tr>
-<td valign="top">↳</td>
 <td valign="top">⚙️ Operations Co-Op</td>
 <td valign="top">Hillsboro, OR</td>
 <td valign="top" align="center"><a href="https://entegris.wd1.myworkdayjobs.com/entegriscareers/job/Hillsboro-OR/Operations-Co-Op_REQ-14453">Apply</a></td>
@@ -1578,7 +1599,7 @@ _Updated 2026-11-24 · 301 roles · 96 company boards scraped (1 unreachable thi
 </table>
 
 <a id="new-grad"></a>
-## 🚀 New Grad / Early Career (83)
+## 🚀 New Grad / Early Career (87)
 
 <table>
 <thead>
@@ -1592,10 +1613,45 @@ _Updated 2026-11-24 · 301 roles · 96 company boards scraped (1 unreachable thi
 </thead>
 <tbody>
 <tr>
+<td valign="top"><strong>Analog Devices</strong></td>
+<td valign="top">⚙️ Associate Engineer, Quality Engineering</td>
+<td valign="top">US, MA, Wilmington</td>
+<td valign="top" align="center"><a href="https://analogdevices.wd1.myworkdayjobs.com/External/job/US-MA-Wilmington/Associate-Engineer--Quality-Engineering_R267322">Apply</a></td>
+<td valign="top" align="center">Nov 24</td>
+</tr>
+<tr>
 <td valign="top"><strong>Ecolab</strong></td>
 <td valign="top">⚙️ (Junior) Indirect Operations Specialist</td>
 <td valign="top">POL - Malopolskie - Kraków</td>
 <td valign="top" align="center"><a href="https://ecolab.wd1.myworkdayjobs.com/ecolab_external/job/POL---Malopolskie---Krakw/Indirect-Operations-Specialist_R00311093">Apply</a></td>
+<td valign="top" align="center">Nov 24</td>
+</tr>
+<tr>
+<td valign="top"><strong>Entegris</strong></td>
+<td valign="top">⚙️ Engineer I, Quality Assurance</td>
+<td valign="top">Danbury, CT</td>
+<td valign="top" align="center"><a href="https://entegris.wd1.myworkdayjobs.com/entegriscareers/job/Danbury-CT/Engineer-I--Quality-Assurance_REQ-16167">Apply</a></td>
+<td valign="top" align="center">Nov 24</td>
+</tr>
+<tr>
+<td valign="top"><strong>Honeywell</strong></td>
+<td valign="top">⚙️ Application Engineer I</td>
+<td valign="top">Bentonville, AR, United States</td>
+<td valign="top" align="center"><a href="https://ibqbjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/162706">Apply</a></td>
+<td valign="top" align="center">Nov 24</td>
+</tr>
+<tr>
+<td valign="top"><strong>Linde</strong></td>
+<td valign="top">🧪 2027 Entry Level Engineer – Hydrogen Technical Orientation Program (HyTOP)</td>
+<td valign="top">The Woodlands, TX, United States</td>
+<td valign="top" align="center"><a href="https://linde.csod.com/ux/ats/careersite/23/home/requisition/33481?c=linde">Apply</a></td>
+<td valign="top" align="center">Nov 24</td>
+</tr>
+<tr>
+<td valign="top"><strong>Micron</strong></td>
+<td valign="top">🧪 New College Grad - Semiconductor Process Engineer</td>
+<td valign="top">Boise, ID - ID1</td>
+<td valign="top" align="center"><a href="https://micron.wd1.myworkdayjobs.com/External/job/Boise-ID---ID1/New-College-Grad---Semiconductor-Process-Engineer_JR116031">Apply</a></td>
 <td valign="top" align="center">Nov 24</td>
 </tr>
 <tr>
@@ -1658,7 +1714,7 @@ _Updated 2026-11-24 · 301 roles · 96 company boards scraped (1 unreachable thi
 <td valign="top">↳</td>
 <td valign="top">🧪 New College Grad - Shift Process Engineer</td>
 <td valign="top">Manassas, VA - Fab 6</td>
-<td valign="top" align="center"><a href="https://micron.wd1.myworkdayjobs.com/External/job/Manassas-VA----Fab-6/New-College-Grad---Shift-Process-Engineer_JR117467">Apply</a></td>
+<td valign="top" align="center"><a href="https://micron.wd1.myworkdayjobs.com/External/job/Manassas-VA----Fab-6/New-College-Grad---Shift-Process-Engineer_JR114405">Apply</a></td>
 <td valign="top" align="center">Nov 23</td>
 </tr>
 <tr>
@@ -1715,13 +1771,6 @@ _Updated 2026-11-24 · 301 roles · 96 company boards scraped (1 unreachable thi
 <td valign="top">⚙️ Project Engineer I</td>
 <td valign="top">Atlanta, GA, United States</td>
 <td valign="top" align="center"><a href="https://ibqbjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/162578">Apply</a></td>
-<td valign="top" align="center">Nov 19</td>
-</tr>
-<tr>
-<td valign="top"><strong>Micron</strong></td>
-<td valign="top">🧪 New College Grad - Semiconductor Process Engineer</td>
-<td valign="top">Boise, ID - ID1</td>
-<td valign="top" align="center"><a href="https://micron.wd1.myworkdayjobs.com/External/job/Boise-ID---ID1/New-College-Grad---Semiconductor-Process-Engineer_JR116031">Apply</a></td>
 <td valign="top" align="center">Nov 19</td>
 </tr>
 <tr>

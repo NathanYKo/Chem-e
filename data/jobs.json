@@ -13,19 +13,6 @@
     "first_seen": "2026-11-22"
   },
   {
-    "id": "workday:globalfoundries:/job/USA---New-York---Malta/Advanced-Manufacturing-Equipment-Engineer--2027-New-College-Graduate-_JR-2604702",
-    "company": "GlobalFoundries",
-    "category": "Semiconductors \u0026 Electronics",
-    "title": "Advanced Manufacturing Equipment Engineer (2027 New College Graduate)",
-    "location": "USA - New York - Malta",
-    "url": "https://globalfoundries.wd1.myworkdayjobs.com/External/job/USA---New-York---Malta/Advanced-Manufacturing-Equipment-Engineer--2027-New-College-Graduate-_JR-2604702",
-    "source": "workday",
-    "posted": "2026-11-27",
-    "level": "New Grad / Early Career",
-    "fit": "ChemE",
-    "first_seen": "2026-11-27"
-  },
-  {
     "id": "successfactors:careers.skyworksinc.com:1445108300",
     "company": "Skyworks Solutions",
     "category": "Semiconductors \u0026 Electronics",
@@ -50,19 +37,6 @@
     "level": "Internship",
     "fit": "Engineering",
     "first_seen": "2026-11-22"
-  },
-  {
-    "id": "successfactors:careers.skyworksinc.com:1445097000",
-    "company": "Skyworks Solutions",
-    "category": "Semiconductors \u0026 Electronics",
-    "title": "Device and Process Development Intern",
-    "location": "Richardson, United States",
-    "url": "https://careers.skyworksinc.com/job/Richardson-Device-and-Process-Development-Intern-TX-75080/1445097000/",
-    "source": "successfactors",
-    "posted": "2026-11-27",
-    "level": "Internship",
-    "fit": "ChemE",
-    "first_seen": "2026-11-27"
   },
   {
     "id": "successfactors:careers.skyworksinc.com:1445093800",
@@ -130,6 +104,19 @@
     "first_seen": "2026-11-26"
   },
   {
+    "id": "successfactors:careers.skyworksinc.com:1444550000",
+    "company": "Skyworks Solutions",
+    "category": "Semiconductors \u0026 Electronics",
+    "title": "Device and Process Development Intern",
+    "location": "Richardson, United States",
+    "url": "https://careers.skyworksinc.com/job/Richardson-Device-and-Process-Development-Intern-TX-75080/1444550000/",
+    "source": "successfactors",
+    "posted": "2026-11-26",
+    "level": "Internship",
+    "fit": "ChemE",
+    "first_seen": "2026-11-28"
+  },
+  {
     "id": "successfactors:careers.skyworksinc.com:1444656500",
     "company": "Skyworks Solutions",
     "category": "Semiconductors \u0026 Electronics",
@@ -180,32 +167,6 @@
     "level": "Co-op",
     "fit": "Engineering",
     "first_seen": "2026-11-22"
-  },
-  {
-    "id": "successfactors:careers.skyworksinc.com:1444614500",
-    "company": "Skyworks Solutions",
-    "category": "Semiconductors \u0026 Electronics",
-    "title": "RFIC Design Engineering Intern",
-    "location": "Greensboro, United States",
-    "url": "https://careers.skyworksinc.com/job/Greensboro-RFIC-Design-Engineering-Intern-NC-27409/1444614500/",
-    "source": "successfactors",
-    "posted": "2026-11-26",
-    "level": "Internship",
-    "fit": "Engineering",
-    "first_seen": "2026-11-28"
-  },
-  {
-    "id": "successfactors:careers.skyworksinc.com:1444545600",
-    "company": "Skyworks Solutions",
-    "category": "Semiconductors \u0026 Electronics",
-    "title": "Test Engineering Intern",
-    "location": "Greensboro, United States",
-    "url": "https://careers.skyworksinc.com/job/Greensboro-Test-Engineering-Intern-NC-27409/1444545600/",
-    "source": "successfactors",
-    "posted": "2026-11-26",
-    "level": "Internship",
-    "fit": "Engineering",
-    "first_seen": "2026-11-28"
   },
   {
     "id": "successfactors:careers.skyworksinc.com:1444663000",
@@ -468,16 +429,16 @@
     "first_seen": "2026-11-22"
   },
   {
-    "id": "successfactors:careers.skyworksinc.com:1444236100",
+    "id": "successfactors:careers.skyworksinc.com:1444072800",
     "company": "Skyworks Solutions",
     "category": "Semiconductors \u0026 Electronics",
-    "title": "Process Engineering Intern",
-    "location": "Richardson, United States",
-    "url": "https://careers.skyworksinc.com/job/Richardson-Process-Engineering-Intern-TX-75080/1444236100/",
+    "title": "RFIC Design Engineering Intern",
+    "location": "Greensboro, United States",
+    "url": "https://careers.skyworksinc.com/job/Greensboro-RFIC-Design-Engineering-Intern-NC-27409/1444072800/",
     "source": "successfactors",
     "posted": "2026-11-25",
     "level": "Internship",
-    "fit": "ChemE",
+    "fit": "Engineering",
     "first_seen": "2026-11-28"
   },
   {
@@ -494,17 +455,17 @@
     "first_seen": "2026-11-22"
   },
   {
-    "id": "successfactors:careers.skyworksinc.com:1444081600",
+    "id": "successfactors:careers.skyworksinc.com:1444325300",
     "company": "Skyworks Solutions",
     "category": "Semiconductors \u0026 Electronics",
     "title": "Test Engineering Intern",
-    "location": "Chelmsford, United States",
-    "url": "https://careers.skyworksinc.com/job/Chelmsford-Test-Engineering-Intern-MA-01824-2558/1444081600/",
+    "location": "Greensboro, United States",
+    "url": "https://careers.skyworksinc.com/job/Greensboro-Test-Engineering-Intern-NC-27409/1444325300/",
     "source": "successfactors",
     "posted": "2026-11-25",
     "level": "Internship",
     "fit": "Engineering",
-    "first_seen": "2026-11-22"
+    "first_seen": "2026-11-28"
   },
   {
     "id": "successfactors:careers.skyworksinc.com:1444336900",
@@ -513,6 +474,19 @@
     "title": "Test Engineering Intern",
     "location": "Chandler, United States",
     "url": "https://careers.skyworksinc.com/job/Chandler-Test-Engineering-Intern-MN-85226/1444336900/",
+    "source": "successfactors",
+    "posted": "2026-11-25",
+    "level": "Internship",
+    "fit": "Engineering",
+    "first_seen": "2026-11-22"
+  },
+  {
+    "id": "successfactors:careers.skyworksinc.com:1444081600",
+    "company": "Skyworks Solutions",
+    "category": "Semiconductors \u0026 Electronics",
+    "title": "Test Engineering Intern",
+    "location": "Chelmsford, United States",
+    "url": "https://careers.skyworksinc.com/job/Chelmsford-Test-Engineering-Intern-MA-01824-2558/1444081600/",
     "source": "successfactors",
     "posted": "2026-11-25",
     "level": "Internship",
@@ -596,19 +570,6 @@
     "level": "Internship",
     "fit": "Engineering",
     "first_seen": "2026-11-26"
-  },
-  {
-    "id": "workday:chemours:/job/US---NJ---Deepwater/Chemical-Engineering-Spring--Summer-Co-op_JR15223",
-    "company": "Chemours",
-    "category": "Chemicals \u0026 Materials",
-    "title": "Chemical Engineering Spring- Summer Co-op",
-    "location": "US - NJ - Deepwater",
-    "url": "https://chemours.wd103.myworkdayjobs.com/Chemours/job/US---NJ---Deepwater/Chemical-Engineering-Spring--Summer-Co-op_JR15223",
-    "source": "workday",
-    "posted": "2026-11-24",
-    "level": "Co-op",
-    "fit": "ChemE",
-    "first_seen": "2026-11-23"
   },
   {
     "id": "workday:ecolab:/job/POL---Malopolskie---Krakw/Indirect-Operations-Specialist_R00311093",
@@ -832,6 +793,19 @@
     "first_seen": "2026-11-22"
   },
   {
+    "id": "successfactors:careers.skyworksinc.com:1443828100",
+    "company": "Skyworks Solutions",
+    "category": "Semiconductors \u0026 Electronics",
+    "title": "Process Engineering Intern",
+    "location": "Richardson, United States",
+    "url": "https://careers.skyworksinc.com/job/Richardson-Process-Engineering-Intern-TX-75080/1443828100/",
+    "source": "successfactors",
+    "posted": "2026-11-24",
+    "level": "Internship",
+    "fit": "ChemE",
+    "first_seen": "2026-11-28"
+  },
+  {
     "id": "successfactors:careers.skyworksinc.com:1443685000",
     "company": "Skyworks Solutions",
     "category": "Semiconductors \u0026 Electronics",
@@ -949,6 +923,19 @@
     "first_seen": "2026-11-22"
   },
   {
+    "id": "workday:chemours:/job/US---NJ---Deepwater/Chemical-Engineering-Spring--Summer-Co-op_JR15223",
+    "company": "Chemours",
+    "category": "Chemicals \u0026 Materials",
+    "title": "Chemical Engineering Spring- Summer Co-op",
+    "location": "US - NJ - Deepwater",
+    "url": "https://chemours.wd103.myworkdayjobs.com/Chemours/job/US---NJ---Deepwater/Chemical-Engineering-Spring--Summer-Co-op_JR15223",
+    "source": "workday",
+    "posted": "2026-11-23",
+    "level": "Co-op",
+    "fit": "ChemE",
+    "first_seen": "2026-11-23"
+  },
+  {
     "id": "workday:dow:/job/Midland-MI-USA/XMLNAME-2026-2027-Campus-Graduate---Research---Development--BS-MS-_R2068809",
     "company": "Dow",
     "category": "Chemicals \u0026 Materials",
@@ -1053,17 +1040,17 @@
     "first_seen": "2026-11-23"
   },
   {
-    "id": "workday:micron:/job/Manassas-VA----Fab-6/New-College-Grad---Shift-Process-Engineer_JR117467",
+    "id": "workday:micron:/job/Manassas-VA----Fab-6/New-College-Grad---Shift-Process-Engineer_JR114405",
     "company": "Micron",
     "category": "Semiconductors \u0026 Electronics",
     "title": "New College Grad - Shift Process Engineer",
     "location": "Manassas, VA - Fab 6",
-    "url": "https://micron.wd1.myworkdayjobs.com/External/job/Manassas-VA----Fab-6/New-College-Grad---Shift-Process-Engineer_JR117467",
+    "url": "https://micron.wd1.myworkdayjobs.com/External/job/Manassas-VA----Fab-6/New-College-Grad---Shift-Process-Engineer_JR114405",
     "source": "workday",
     "posted": "2026-11-23",
     "level": "New Grad / Early Career",
     "fit": "ChemE",
-    "first_seen": "2026-11-27"
+    "first_seen": "2026-11-28"
   },
   {
     "id": "workday:micron:/job/Boise-ID---Main-Site/New-College-Grad-Engineer--Manufacturing_JR113007",
@@ -1116,6 +1103,19 @@
     "level": "Co-op",
     "fit": "Engineering",
     "first_seen": "2026-11-22"
+  },
+  {
+    "id": "successfactors:careers.skyworksinc.com:1453124300",
+    "company": "Skyworks Solutions",
+    "category": "Semiconductors \u0026 Electronics",
+    "title": "Product Engineering Summer/Fall Co-Op (June-Dec'27)",
+    "location": "Irvine, CA, United States",
+    "url": "https://careers.skyworksinc.com/job/Irvine-Product-Engineering-SummerFall-Co-Op-%28June-Dec'27%29-CA-92617/1453124300/",
+    "source": "successfactors",
+    "posted": "2026-11-23",
+    "level": "Co-op",
+    "fit": "Engineering",
+    "first_seen": "2026-11-28"
   },
   {
     "id": "successfactors:careers.skyworksinc.com:1424368500",
@@ -1351,19 +1351,6 @@
     "first_seen": "2026-11-19"
   },
   {
-    "id": "workday:entegris:/job/Chaska-MN/Manufacturing-Engineering--Co-Op_REQ-14447-1",
-    "company": "Entegris",
-    "category": "Semiconductors \u0026 Electronics",
-    "title": "Manufacturing Engineering Co-Op",
-    "location": "Chaska, MN",
-    "url": "https://entegris.wd1.myworkdayjobs.com/entegriscareers/job/Chaska-MN/Manufacturing-Engineering--Co-Op_REQ-14447-1",
-    "source": "workday",
-    "posted": "2026-11-19",
-    "level": "Co-op",
-    "fit": "Engineering",
-    "first_seen": "2026-11-27"
-  },
-  {
     "id": "workday:entegris:/job/Hillsboro-OR/Operations-Co-Op_REQ-14453",
     "company": "Entegris",
     "category": "Semiconductors \u0026 Electronics",
@@ -1388,6 +1375,19 @@
     "level": "New Grad / Early Career",
     "fit": "Engineering",
     "first_seen": "2026-11-19"
+  },
+  {
+    "id": "workday:kla:/job/Milpitas-CA/Product-Development-Engineer-Intern_2643570-1",
+    "company": "KLA",
+    "category": "Semiconductors \u0026 Electronics",
+    "title": "Product Development Engineer Intern",
+    "location": "Milpitas, CA",
+    "url": "https://kla.wd1.myworkdayjobs.com/Search/job/Milpitas-CA/Product-Development-Engineer-Intern_2643570-1",
+    "source": "workday",
+    "posted": "2026-11-19",
+    "level": "Internship",
+    "fit": "Engineering",
+    "first_seen": "2026-11-28"
   },
   {
     "id": "cornerstone:linde:34684",
@@ -1637,19 +1637,6 @@
     "first_seen": "2026-11-16"
   },
   {
-    "id": "workday:bloomenergy:/job/San-Jose-California/Energy-Transition-Solutions-Intern_JR-25409",
-    "company": "Bloom Energy",
-    "category": "Batteries, Climate \u0026 Nuclear",
-    "title": "Energy Transition Solutions Intern",
-    "location": "San Jose, California",
-    "url": "https://bloomenergy.wd1.myworkdayjobs.com/bloomenergycareers/job/San-Jose-California/Energy-Transition-Solutions-Intern_JR-25409",
-    "source": "workday",
-    "posted": "2026-11-18",
-    "level": "Internship",
-    "fit": "Engineering",
-    "first_seen": "2026-11-27"
-  },
-  {
     "id": "workday:entegris:/job/Chaska-MN/Environmental-Health---Safety-Co-Op_REQ-14449",
     "company": "Entegris",
     "category": "Semiconductors \u0026 Electronics",
@@ -1793,19 +1780,6 @@
     "first_seen": "2026-11-18"
   },
   {
-    "id": "successfactors:careers.skyworksinc.com:1451749200",
-    "company": "Skyworks Solutions",
-    "category": "Semiconductors \u0026 Electronics",
-    "title": "Product Engineering Summer/Fall Co-Op (June - Dec '27)",
-    "location": "Irvine, CA, United States",
-    "url": "https://careers.skyworksinc.com/job/Irvine-Product-Engineering-SummerFall-Co-Op-%28June-Dec-'27%29-CA-92617/1451749200/",
-    "source": "successfactors",
-    "posted": "2026-11-18",
-    "level": "Co-op",
-    "fit": "Engineering",
-    "first_seen": "2026-11-28"
-  },
-  {
     "id": "successfactors:careers.skyworksinc.com:1432089900",
     "company": "Skyworks Solutions",
     "category": "Semiconductors \u0026 Electronics",
@@ -1921,19 +1895,6 @@
     "level": "New Grad / Early Career",
     "fit": "Engineering",
     "first_seen": "2026-11-17"
-  },
-  {
-    "id": "workday:globalfoundries:/job/SGP---Woodlands/Advanced-Manufacturing-Engineering-Intern--May-Dec-2027-_JR-2603750",
-    "company": "GlobalFoundries",
-    "category": "Semiconductors \u0026 Electronics",
-    "title": "Advanced Manufacturing Engineering Intern (May-Dec 2027)",
-    "location": "SGP - Woodlands",
-    "url": "https://globalfoundries.wd1.myworkdayjobs.com/External/job/SGP---Woodlands/Advanced-Manufacturing-Engineering-Intern--May-Dec-2027-_JR-2603750",
-    "source": "workday",
-    "posted": "2026-11-17",
-    "level": "Internship",
-    "fit": "Engineering",
-    "first_seen": "2026-11-26"
   },
   {
     "id": "workday:globalfoundries:/job/USA---Vermont---Essex-Junction/Manufacturing-Quality-Intern--Summer-2026-_JR-2604947",
@@ -2090,6 +2051,19 @@
     "level": "Internship",
     "fit": "Engineering",
     "first_seen": "2026-11-16"
+  },
+  {
+    "id": "workday:entegris:/job/Aurora-IL/Materials-Solutions-Engineering-Intern---Summer-2027_REQ-15856",
+    "company": "Entegris",
+    "category": "Semiconductors \u0026 Electronics",
+    "title": "Materials Solutions Engineering Intern - Summer 2027",
+    "location": "Aurora, IL",
+    "url": "https://entegris.wd1.myworkdayjobs.com/entegriscareers/job/Aurora-IL/Materials-Solutions-Engineering-Intern---Summer-2027_REQ-15856",
+    "source": "workday",
+    "posted": "2026-11-16",
+    "level": "Internship",
+    "fit": "Engineering",
+    "first_seen": "2026-11-28"
   },
   {
     "id": "workday:entegris:/job/Rockrimmon-Colorado-Springs-CO/Process-Engineering-Co-Op_REQ-14485",
@@ -2287,6 +2261,19 @@
     "first_seen": "2026-11-16"
   },
   {
+    "id": "workday:bloomenergy:/job/San-Jose-California/Energy-Transition-Solutions-Intern_JR-25357",
+    "company": "Bloom Energy",
+    "category": "Batteries, Climate \u0026 Nuclear",
+    "title": "Energy Transition Solutions Intern",
+    "location": "San Jose, California",
+    "url": "https://bloomenergy.wd1.myworkdayjobs.com/bloomenergycareers/job/San-Jose-California/Energy-Transition-Solutions-Intern_JR-25357",
+    "source": "workday",
+    "posted": "2026-11-13",
+    "level": "Internship",
+    "fit": "Engineering",
+    "first_seen": "2026-11-28"
+  },
+  {
     "id": "workday:bloomenergy:/job/San-Jose-California/Engineering-Intern_JR-25266",
     "company": "Bloom Energy",
     "category": "Batteries, Climate \u0026 Nuclear",
@@ -2480,19 +2467,6 @@
     "level": "Internship",
     "fit": "Engineering",
     "first_seen": "2026-11-16"
-  },
-  {
-    "id": "workday:entegris:/job/Aurora-IL/Materials-Solutions-Engineering-Intern---Summer-2027_REQ-15860",
-    "company": "Entegris",
-    "category": "Semiconductors \u0026 Electronics",
-    "title": "Materials Solutions Engineering Intern - Summer 2027",
-    "location": "Aurora, IL",
-    "url": "https://entegris.wd1.myworkdayjobs.com/entegriscareers/job/Aurora-IL/Materials-Solutions-Engineering-Intern---Summer-2027_REQ-15860",
-    "source": "workday",
-    "posted": "2026-11-12",
-    "level": "Internship",
-    "fit": "Engineering",
-    "first_seen": "2026-11-26"
   },
   {
     "id": "workday:entegris:/job/Colorado-Springs-CO/Quality-Engineering-Intern_REQ-15867",
@@ -3041,17 +3015,30 @@
     "first_seen": "2026-11-16"
   },
   {
-    "id": "workday:globalfoundries:/job/SGP---Woodlands/Advanced-Manufacturing-Engineering-Intern--Mar-Aug-2027-_JR-2603762-1",
+    "id": "workday:globalfoundries:/job/SGP---Woodlands/Advanced-Manufacturing-Engineering-Intern--Mar-Aug-2027-_JR-2603846",
     "company": "GlobalFoundries",
     "category": "Semiconductors \u0026 Electronics",
     "title": "Advanced Manufacturing Engineering Intern (Mar-Aug 2027)",
     "location": "SGP - Woodlands",
-    "url": "https://globalfoundries.wd1.myworkdayjobs.com/External/job/SGP---Woodlands/Advanced-Manufacturing-Engineering-Intern--Mar-Aug-2027-_JR-2603762-1",
+    "url": "https://globalfoundries.wd1.myworkdayjobs.com/External/job/SGP---Woodlands/Advanced-Manufacturing-Engineering-Intern--Mar-Aug-2027-_JR-2603846",
     "source": "workday",
     "posted": "2026-11-06",
     "level": "Internship",
     "fit": "Engineering",
-    "first_seen": "2026-11-27"
+    "first_seen": "2026-11-28"
+  },
+  {
+    "id": "workday:globalfoundries:/job/SGP---Woodlands/Advanced-Manufacturing-Engineering-Intern--May-Dec-2027-_JR-2603840",
+    "company": "GlobalFoundries",
+    "category": "Semiconductors \u0026 Electronics",
+    "title": "Advanced Manufacturing Engineering Intern (May-Dec 2027)",
+    "location": "SGP - Woodlands",
+    "url": "https://globalfoundries.wd1.myworkdayjobs.com/External/job/SGP---Woodlands/Advanced-Manufacturing-Engineering-Intern--May-Dec-2027-_JR-2603840",
+    "source": "workday",
+    "posted": "2026-11-06",
+    "level": "Internship",
+    "fit": "Engineering",
+    "first_seen": "2026-11-28"
   },
   {
     "id": "workday:globalfoundries:/job/USA---New-York---Malta/Device-Engineering-Intern--Silicon-Photonics--Summer-2027-_JR-2604264",
@@ -3158,19 +3145,6 @@
     "first_seen": "2026-11-22"
   },
   {
-    "id": "workday:chemours:/job/US---DE---Wilmington-Headquarters/Manufacturing-Rotational-Program-Associate---Chemours-Leadership-LAB--Early-Career-_JR15310",
-    "company": "Chemours",
-    "category": "Chemicals \u0026 Materials",
-    "title": "Manufacturing Rotational Program Associate - Chemours Leadership LAB (Early Career)",
-    "location": "US - DE - Wilmington (Headquarters)",
-    "url": "https://chemours.wd103.myworkdayjobs.com/Chemours/job/US---DE---Wilmington-Headquarters/Manufacturing-Rotational-Program-Associate---Chemours-Leadership-LAB--Early-Career-_JR15310",
-    "source": "workday",
-    "posted": "2026-11-05",
-    "level": "New Grad / Early Career",
-    "fit": "Engineering",
-    "first_seen": "2026-11-16"
-  },
-  {
     "id": "workday:gevernova:/job/Field-Engineer-Intern_R5054427-2",
     "company": "GE Vernova",
     "category": "Oil, Gas \u0026 Energy",
@@ -3197,17 +3171,17 @@
     "first_seen": "2026-11-22"
   },
   {
-    "id": "workday:lumentum:/job/USA---CA---San-Jose-Ridder/Internship---Field-Application-Engineer_20261646",
+    "id": "workday:lumentum:/job/USA---CA---San-Jose-Ridder/Internship---Field-Application-Engineer_20261645",
     "company": "Lumentum",
     "category": "Semiconductors \u0026 Electronics",
     "title": "Internship - Field Application Engineer",
     "location": "USA - CA - San Jose (Ridder)",
-    "url": "https://lumentum.wd5.myworkdayjobs.com/LITE/job/USA---CA---San-Jose-Ridder/Internship---Field-Application-Engineer_20261646",
+    "url": "https://lumentum.wd5.myworkdayjobs.com/LITE/job/USA---CA---San-Jose-Ridder/Internship---Field-Application-Engineer_20261645",
     "source": "workday",
     "posted": "2026-11-05",
     "level": "Internship",
     "fit": "Engineering",
-    "first_seen": "2026-11-27"
+    "first_seen": "2026-11-28"
   },
   {
     "id": "workday:micron:/job/Boise-ID---Main-Site/New-College-Grad---Product-Yield-Enhancement-Engineer_JR116872",
@@ -3236,6 +3210,19 @@
     "first_seen": "2026-11-22"
   },
   {
+    "id": "workday:chemours:/job/US---DE---Wilmington-Headquarters/Manufacturing-Rotational-Program-Associate---Chemours-Leadership-LAB--Early-Career-_JR15310",
+    "company": "Chemours",
+    "category": "Chemicals \u0026 Materials",
+    "title": "Manufacturing Rotational Program Associate - Chemours Leadership LAB (Early Career)",
+    "location": "US - DE - Wilmington (Headquarters)",
+    "url": "https://chemours.wd103.myworkdayjobs.com/Chemours/job/US---DE---Wilmington-Headquarters/Manufacturing-Rotational-Program-Associate---Chemours-Leadership-LAB--Early-Career-_JR15310",
+    "source": "workday",
+    "posted": "2026-11-04",
+    "level": "New Grad / Early Career",
+    "fit": "Engineering",
+    "first_seen": "2026-11-16"
+  },
+  {
     "id": "workday:kla:/job/Ann-Arbor-MI/Applications-Engineering-Intern_2642296-1",
     "company": "KLA",
     "category": "Semiconductors \u0026 Electronics",
@@ -3260,19 +3247,6 @@
     "level": "Internship",
     "fit": "Engineering",
     "first_seen": "2026-11-22"
-  },
-  {
-    "id": "workday:cree:/job/Marcy-New-York/Thin-Films-Engineering-Intern_26-1009",
-    "company": "Wolfspeed",
-    "category": "Semiconductors \u0026 Electronics",
-    "title": "Thin Films Engineering Intern",
-    "location": "Marcy, New York",
-    "url": "https://cree.wd108.myworkdayjobs.com/EXT/job/Marcy-New-York/Thin-Films-Engineering-Intern_26-1009",
-    "source": "workday",
-    "posted": "2026-11-04",
-    "level": "Internship",
-    "fit": "ChemE",
-    "first_seen": "2026-11-16"
   },
   {
     "id": "lever:cfsenergy:deff5f97-d48c-45fe-800b-55cc0f359568",
@@ -3346,6 +3320,19 @@
     "title": "Process Control Engineer Intern (Summer 2027)",
     "location": "US - Calvert City, KY",
     "url": "https://westlake.wd1.myworkdayjobs.com/westlake/job/US---Calvert-City-KY/Process-Control-Engineer-Intern--Summer-2027-_R33711-1",
+    "source": "workday",
+    "posted": "2026-11-03",
+    "level": "Internship",
+    "fit": "ChemE",
+    "first_seen": "2026-11-16"
+  },
+  {
+    "id": "workday:cree:/job/Marcy-New-York/Thin-Films-Engineering-Intern_26-1009",
+    "company": "Wolfspeed",
+    "category": "Semiconductors \u0026 Electronics",
+    "title": "Thin Films Engineering Intern",
+    "location": "Marcy, New York",
+    "url": "https://cree.wd108.myworkdayjobs.com/EXT/job/Marcy-New-York/Thin-Films-Engineering-Intern_26-1009",
     "source": "workday",
     "posted": "2026-11-03",
     "level": "Internship",
